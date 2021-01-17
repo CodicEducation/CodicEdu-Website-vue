@@ -1,0 +1,202 @@
+<template>
+  <div class="contact-us">
+    <disk-nav />
+    <mobile-navbar />
+    <main>
+      <section class="txt-cont">
+        <h2>kontakta oss</h2>
+        <p class="welcome">
+          Vi svarar gärna på frågor angående IT-konsulter, utbildare eller andra
+          eventuella samarbeten i Göteborg. Kontakta oss här nedan eller hör av
+          dig direkt till någon av våra medarbetare. Vi återkommer så fort vi
+          kan.
+        </p>
+        <article>
+          <p class="cont-info">Codic Consulting: +46-765-519-733</p>
+          <p class="cont-info">Codic Education: +46-768-990-065</p>
+          <p class="cont-info">hi@codic.se</p>
+        </article>
+      </section>
+      <form @submit.prevent="sendMsg" class="form-cont">
+        <div class="full-name">
+          <article class="name-cont">
+            <label for="firstName">förnamn</label>
+            <input type="text" name="firstName" required />
+          </article>
+          <article class="name-cont">
+            <label for="lastName">efternamn</label>
+            <input type="text" name="lastName" required />
+          </article>
+        </div>
+        <label for="email">e-post</label>
+        <input type="email" name="email" required />
+        <label for="txt">medelande</label>
+        <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+        <button>skicka</button>
+      </form>
+    </main>
+    <Footer />
+  </div>
+</template>
+
+<script>
+import DiskNav from "../components/Navigation/DiskNavbar.vue"
+import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
+
+import Footer from "../components/Footer/Footer.vue"
+
+export default {
+  name: "ContactUs",
+  components: {
+    DiskNav,
+    MobileNavbar,
+    Footer,
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/styles/globalStyles.scss";
+.contact-us {
+  width: 100%;
+  min-height: 100vh;
+  @include flex();
+  justify-content: space-between;
+  //background: #222;
+
+  main {
+    min-height: 86vh;
+    padding: 4rem 0rem;
+    @include flex();
+    flex-direction: row;
+    justify-content: space-around;
+
+    section,
+    form {
+      width: 35%;
+      height: 55vh;
+      @include flex();
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      label {
+        font-size: 0.8rem;
+        color: #888;
+        text-transform: capitalize;
+      }
+
+      input,
+      textarea {
+        margin: 0.8rem 0rem 1.6rem 0rem;
+        width: 100%;
+        padding: 1.4rem;
+        background: #0002;
+        border: none;
+        border-radius: 4px;
+        color: #ddd;
+        border: 1px solid #444;
+      }
+    }
+
+    .txt-cont {
+      text-align: left;
+
+      h2 {
+        color: $main-color;
+      }
+
+      p {
+        margin: 0.8rem 0rem;
+        font-weight: bold;
+        color: #ddd;
+      }
+
+      p.welcome {
+        margin: 1rem 0rem 5rem 0rem;
+        line-height: 1.8rem;
+        color: #bbb;
+        font-weight: initial;
+      }
+    }
+
+    .form-cont {
+      .full-name {
+        @include flex();
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        .name-cont {
+          @include flex();
+          align-items: flex-start;
+          width: 45%;
+        }
+      }
+
+      button {
+        @include btn();
+        font-size: 0.9rem;
+        padding: 0.8rem 3.2rem;
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+// Mobile devices
+
+@media only screen and (max-width: 768px) {
+  .contact-us {
+    main {
+      padding: 2rem;
+      flex-direction: column;
+
+      section,
+      form {
+        width: 100%;
+        height: initial;
+        min-height: 60vh;
+        input,
+        textarea {
+          padding: 0.8rem;
+          max-height: 8rem;
+          font-size: 1rem;
+        }
+      }
+
+      .txt-cont {
+        margin-top: 4rem;
+        font-size: 0.9rem;
+
+        p.welcome {
+          margin-bottom: 2rem;
+          max-width: 30rem;
+        }
+
+        article {
+          margin: 2rem 0rem;
+        }
+      }
+
+      .form-cont {
+        button {
+          width: 100%;
+          margin: 2rem 0rem;
+        }
+      }
+    }
+  }
+}
+
+// Smaller devices
+@media only screen and (max-height: 668px) {
+  .contact-us {
+    main {
+      form,
+      section {
+        min-height: 70vh;
+      }
+    }
+  }
+}
+</style>

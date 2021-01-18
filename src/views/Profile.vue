@@ -1,6 +1,7 @@
 <template>
   <div class="profile">
-    <DiskNav />
+    <disk-nav />
+    <mobile-navbar />
 
     <main>
       <section class="user-info">
@@ -24,6 +25,8 @@
 
 <script>
 import DiskNav from "../components/Navigation/DiskNavbar.vue"
+import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
+
 import Footer from "../components/Footer/Footer.vue"
 import UserList from "../components/Course/User/UserList.vue"
 
@@ -33,6 +36,7 @@ export default {
     DiskNav,
     Footer,
     UserList,
+    MobileNavbar,
   },
   computed: {
     uid() {

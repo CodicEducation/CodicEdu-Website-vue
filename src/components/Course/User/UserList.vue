@@ -30,21 +30,16 @@ export default {
   width: 100%;
   //background: #0002;
   height: 100%;
-  @include flex();
-  justify-content: flex-start;
-  overflow-y: scroll;
 
   .list-title {
     background: #141414;
     width: 100%;
-    @include flex();
-    flex-direction: row;
-    justify-content: space-between;
     padding: 2.5rem 14%;
     margin-bottom: 0.4rem;
     color: #eee;
     font-size: 0.9rem;
     text-transform: capitalize;
+    text-align: left;
   }
 
   &::-webkit-scrollbar {
@@ -61,6 +56,14 @@ export default {
 
   &::-webkit-scrollbar-track {
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .playlist {
+    .list-title {
+      padding: 2.5rem 2rem;
+    }
   }
 }
 </style>

@@ -57,7 +57,7 @@ export default {
 .profile {
   @include flex();
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   background: #222;
 
@@ -100,6 +100,30 @@ export default {
 
     .list {
       width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profile {
+    main {
+      .user-info {
+        width: 100%;
+        height: inherit;
+        margin: 1rem 0rem 4rem 0rem;
+        .img {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
 }

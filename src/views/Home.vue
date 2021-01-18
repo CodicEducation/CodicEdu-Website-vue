@@ -409,13 +409,16 @@ export default {
       .main-view {
         height: initial;
         height: 100vh;
-        padding: 0rem 2rem 4rem 2rem;
+        padding: 3rem 2rem 4rem 2rem;
         @include flex();
+        justify-content: flex-start;
+
         .laptop {
           width: initial;
           align-self: center;
           margin-left: 0rem;
-          transform: scale(0.7);
+          margin: 2.5rem 0rem;
+          width: 86%;
         }
 
         blockquote {

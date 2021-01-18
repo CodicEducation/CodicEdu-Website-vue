@@ -33,13 +33,12 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .courses-list {
-    width: 100vw;
+    width: 98vw;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     align-items: flex-start;
     justify-content: flex-start;
-    align-self: flex-start;
   }
 }
 </style>

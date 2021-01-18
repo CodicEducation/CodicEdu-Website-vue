@@ -408,22 +408,21 @@ export default {
     main {
       .main-view {
         height: initial;
-        min-height: 100vh;
-        padding: 2rem 2rem 4rem 2rem;
+        height: 100vh;
+        padding: 0rem 2rem 4rem 2rem;
         @include flex();
         .laptop {
           width: initial;
           align-self: center;
           margin-left: 0rem;
           transform: scale(0.7);
-          margin: 1rem 0rem;
         }
 
         blockquote {
           font-size: 1.4rem;
           align-self: initial;
           text-align: left;
-          margin: 0.8rem 0rem;
+          margin: 0.6rem 0rem;
           line-height: 1.8rem;
         }
 
@@ -433,7 +432,7 @@ export default {
           text-align: left;
           font-size: 0.82rem;
           max-width: 42ch;
-          margin: 0.4rem 0rem;
+          margin: 0.2rem 0rem;
           br {
             display: initial;
           }

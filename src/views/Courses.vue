@@ -135,11 +135,12 @@ export default {
   .courses {
     main {
       .head {
-        height: 60vh;
+        min-height: 30rem;
         padding: 2rem;
         align-items: flex-start;
         h2 {
           font-size: 1.4rem;
+          margin: 0.6rem 0rem;
         }
 
         p {
@@ -147,6 +148,7 @@ export default {
           font-size: 0.88rem;
           text-align: left;
           max-width: 40rem;
+          line-height: 1.6rem;
         }
       }
 

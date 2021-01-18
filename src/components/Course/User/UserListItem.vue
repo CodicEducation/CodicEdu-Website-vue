@@ -1,6 +1,5 @@
 <template>
   <section class="list-item">
-    <p>-</p>
     <p class="video-name">{{ item.vidName }}</p>
     <article>
       <p class="length">{{ item.vidLength }}</p>
@@ -38,7 +37,7 @@ export default {
   height: 4.7rem;
   @include flex();
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 0.4rem;
   color: #888;
   font-size: 0.9rem;
@@ -70,6 +69,29 @@ export default {
       border: none;
       color: #eee;
       cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list-item {
+    padding: 0rem 2rem;
+    overflow: hidden;
+    padding-right: 5rem;
+
+    .video-name {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: initial;
+    }
+
+    article {
+      button {
+        padding: 0.4rem 0.8rem;
+        margin: 0rem 1rem;
+      }
     }
   }
 }

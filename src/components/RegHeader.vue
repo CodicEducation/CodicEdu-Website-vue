@@ -16,6 +16,7 @@ export default {}
 @import "../assets/styles/globalStyles.scss";
 
 header {
+  width: 100%;
   @include flex();
   h1 {
     &::first-letter {
@@ -34,6 +35,20 @@ header {
 
     &::first-letter {
       text-transform: capitalize;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  header {
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      width: 36ch;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      line-height: 1.4rem;
     }
   }
 }

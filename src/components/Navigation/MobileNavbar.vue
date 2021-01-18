@@ -8,11 +8,16 @@
     />
 
     <img class="menu-btn" src="../../assets/images/menuBtn.svg" alt="" />
+    <mobile-menu />
   </nav>
 </template>
 
 <script>
+import MobileMenu from "./MobileMenu.vue"
 export default {
+  components: {
+    MobileMenu,
+  },
   methods: {
     navToHome: function() {
       this.$router.push("/")
@@ -24,6 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/styles/globalStyles.scss";
 nav {
+  position: relative;
   width: 100%;
   height: 6rem;
   padding: 2rem 6rem;

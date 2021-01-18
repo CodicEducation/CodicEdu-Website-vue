@@ -7,8 +7,13 @@
       class="logo"
     />
 
-    <img class="menu-btn" src="../../assets/images/menuBtn.svg" alt="" />
-    <mobile-menu />
+    <img
+      class="menu-btn"
+      src="../../assets/images/menuBtn.svg"
+      alt=""
+      @click="showMenu"
+    />
+    <mobile-menu v-if="menuShown" @hideMenu="hideMenuListener" />
   </nav>
 </template>
 
@@ -16,7 +21,9 @@
 import MobileMenu from "./MobileMenu.vue"
 export default {
   data: () => {
-    showMenu: false
+    return {
+      menuShown: false,
+    }
   },
   components: {
     MobileMenu,
@@ -24,6 +31,12 @@ export default {
   methods: {
     navToHome: function() {
       this.$router.push("/")
+    },
+    hideMenuListener: function() {
+      this.menuShown = false
+    },
+    showMenu: function() {
+      this.menuShown = true
     },
   },
 }

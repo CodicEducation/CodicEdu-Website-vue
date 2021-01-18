@@ -1,5 +1,5 @@
 <template>
-  <transition name="slidIn" mode="in-out">
+  <transition name="fade" mode="out-in">
     <div class="mobile-menu">
       <button class="closeBtn">
         <img src="../../assets/images/closeBtn.svg" alt="" @click="hideMenu" />
@@ -15,6 +15,11 @@
           <router-link to="/contact">kontakta oss</router-link>
         </li>
       </ul>
+
+      <section class="buttons">
+        <button class="cta">min sidor</button
+        ><button class="ghost">logga ut</button>
+      </section>
     </div>
   </transition>
 </template>
@@ -33,7 +38,7 @@ export default {
 @import "../../assets/styles/globalStyles.scss";
 .mobile-menu {
   @include flex();
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 2.3rem 0rem;
   position: fixed;
   top: 0;
@@ -43,6 +48,7 @@ export default {
   background: #222;
   z-index: 11;
   color: #aaa;
+  animation: slideIn 0.4s forwards;
 
   .closeBtn {
     align-self: flex-end;
@@ -53,6 +59,57 @@ export default {
     img {
       width: 1.2rem;
     }
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    padding: 2rem 0rem;
+
+    li {
+      padding: 2rem;
+      margin: 1rem 0rem;
+      background: #262626;
+      width: 100%;
+
+      a {
+        color: #aaa;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    margin: 2rem 0rem;
+    width: 100%;
+    @include flex();
+
+    .cta {
+      @include btn();
+      padding: 0.8rem 6rem;
+      margin: 1rem 0rem 2rem 0rem;
+    }
+
+    .ghost {
+      border: none;
+      background: transparent;
+      color: #aaa;
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 </style>

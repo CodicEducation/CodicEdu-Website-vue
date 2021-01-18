@@ -408,8 +408,8 @@ export default {
     main {
       .main-view {
         height: initial;
-        height: 100vh;
-        padding: 2rem 2rem 4rem 2rem;
+        min-height: 100vh;
+        padding: 2rem 2rem 8rem 2rem;
         @include flex();
         justify-content: flex-start;
 
@@ -418,7 +418,7 @@ export default {
           align-self: center;
           margin-left: 0rem;
           margin: 2.5rem 0rem;
-          width: 96%;
+          width: 108%;
         }
 
         blockquote {

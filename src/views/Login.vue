@@ -61,14 +61,6 @@ export default {
   @include flex();
   color: #f2f2f2;
   background: #222;
-  header {
-    h1 {
-      span {
-        text-transform: uppercase;
-        color: $main-color;
-      }
-    }
-  }
 
   form {
     margin: 6rem 0rem;
@@ -96,6 +88,48 @@ export default {
       a {
         font-weight: bold;
         color: #ccc;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .login {
+    form {
+      width: 60%;
+
+      article {
+        @include flex();
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .login {
+    form {
+      width: 86%;
+      article {
+        img {
+          width: 0.7rem;
+        }
+        input {
+          padding: 0.9rem;
+          width: 80%;
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        padding: 0.8rem 4rem;
+        font-size: 0.8rem;
+      }
+    }
+    footer {
+      p {
+        font-size: 0.9rem;
       }
     }
   }

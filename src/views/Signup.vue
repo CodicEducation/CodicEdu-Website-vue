@@ -144,4 +144,46 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 1025px) {
+  .signup {
+    form {
+      width: 60%;
+
+      article {
+        @include flex();
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .signup {
+    form {
+      width: 86%;
+      article {
+        img {
+          width: 0.7rem;
+        }
+        input {
+          padding: 0.9rem;
+          width: 80%;
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        padding: 0.8rem 4rem;
+        font-size: 0.8rem;
+      }
+    }
+    footer {
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
 </style>

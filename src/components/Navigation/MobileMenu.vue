@@ -1,6 +1,17 @@
 <template>
   <div class="mobile-menu">
     <button><img src="../../assets/images/closeBtn.svg" alt="" /></button>
+    <ul>
+      <li>
+        <router-link to="/">startsidan</router-link>
+      </li>
+      <li>
+        <router-link to="/courses">våra kurser</router-link>
+      </li>
+      <li>
+        <router-link to="/contact">kontakta oss</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 

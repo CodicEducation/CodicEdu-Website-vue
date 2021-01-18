@@ -52,11 +52,11 @@ export default {
     width: 100%;
     height: 40%;
     overflow: hidden;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
 
     img {
       width: 100%;
-      border-bottom-right-radius: 6px;
-      border-bottom-left-radius: 6px;
     }
   }
 
@@ -96,7 +96,7 @@ export default {
 @media only screen and (max-width: 768px) {
   .course-in-courses {
     width: 18rem;
-    height: 24rem;
+    height: 22rem;
     padding: 0rem 1rem;
     margin: 2rem 1rem;
     flex: 0 0 auto;
@@ -109,7 +109,11 @@ export default {
     p {
       font-size: 0.8rem;
       line-height: 1.2rem;
-      margin: 0.6rem 0rem;
+      margin: 0.2rem 0rem;
+    }
+
+    .lessons {
+      margin: 0.2rem 0rem;
     }
 
     .img {

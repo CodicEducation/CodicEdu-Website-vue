@@ -77,7 +77,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
   nav {
-    height: 3.6rem;
+    height: 4rem;
     padding: 0rem 2rem;
 
     .logo {

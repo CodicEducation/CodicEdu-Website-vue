@@ -17,7 +17,7 @@
       </ul>
 
       <section class="buttons">
-        <button class="cta" @click="navToProfile">min sidor</button>
+        <button class="cta" @click="navToProfile">mina sidor</button>
         <button class="ghost" @click="logout">logga ut</button>
       </section>
     </div>
@@ -45,7 +45,7 @@ export default {
 .mobile-menu {
   @include flex();
   justify-content: space-between;
-  padding: 2.3rem 0rem;
+  padding: 2.3rem 0rem 4rem 0rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -70,10 +70,9 @@ export default {
   ul {
     list-style: none;
     width: 100%;
-    padding: 2rem 0rem;
 
     li {
-      padding: 2rem;
+      padding: 1.2rem 2rem;
       margin: 1rem 0rem;
       background: #262626;
       width: 100%;
@@ -83,7 +82,7 @@ export default {
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 2rem;
         width: 100%;
       }
@@ -94,18 +93,20 @@ export default {
     margin: 2rem 0rem;
     width: 100%;
     @include flex();
+    font-size: 0.9rem;
 
     .cta {
       @include btn();
       padding: 0.8rem 6rem;
       margin: 1rem 0rem 2rem 0rem;
+      font-size: 0.8rem;
     }
 
     .ghost {
       border: none;
       background: transparent;
       color: #aaa;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 }

@@ -163,6 +163,7 @@ export default {
         }
         p {
           font-size: 0.7rem;
+          text-transform: uppercase;
         }
       }
     }

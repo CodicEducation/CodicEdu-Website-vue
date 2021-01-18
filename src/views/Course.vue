@@ -151,9 +151,19 @@ export default {
 @media only screen and (max-width: 1250px) {
   .course-full-view {
     nav {
-      padding: 1.8rem 2rem;
+      padding: 1.2rem 2rem;
       .logo {
-        width: 5rem;
+        width: 3.5rem;
+      }
+
+      .back {
+        width: 4.5rem;
+        img {
+          transform: scale(0.8);
+        }
+        p {
+          font-size: 0.7rem;
+        }
       }
     }
     main {
@@ -163,7 +173,7 @@ export default {
 
       .video-player {
         width: 100%;
-        height: 40vh;
+        height: 44vh;
         padding: 1rem 0rem;
         .video {
           height: 100%;

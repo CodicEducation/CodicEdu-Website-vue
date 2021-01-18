@@ -15,6 +15,9 @@
 <script>
 import MobileMenu from "./MobileMenu.vue"
 export default {
+  data: () => {
+    showMenu: false
+  },
   components: {
     MobileMenu,
   },

@@ -17,8 +17,8 @@
       </ul>
 
       <section class="buttons">
-        <button class="cta">min sidor</button
-        ><button class="ghost">logga ut</button>
+        <button class="cta" @click="navToProfile">min sidor</button>
+        <button class="ghost" @click="logout">logga ut</button>
       </section>
     </div>
   </transition>
@@ -29,6 +29,12 @@ export default {
   methods: {
     hideMenu: function() {
       this.$emit("hideMenu")
+    },
+    navToProfile: function() {
+      this.$router.push("/profile")
+    },
+    logout: function() {
+      this.$store.dispatch("logout")
     },
   },
 }

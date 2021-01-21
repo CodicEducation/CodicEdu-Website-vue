@@ -69,7 +69,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1350px) {
   nav {
     display: none;
   }

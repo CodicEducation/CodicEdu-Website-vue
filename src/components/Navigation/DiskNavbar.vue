@@ -10,6 +10,7 @@
       <router-link to="/">startSidan</router-link>
       <router-link to="/courses">våra kurser</router-link>
       <router-link to="/contact">kontakta oss</router-link>
+      <router-link to="/contact">om oss</router-link>
     </section>
 
     <section class="reg">
@@ -51,12 +52,12 @@ nav {
   }
 
   a {
-    margin: 0rem 1rem;
+    margin: 0rem 0.6rem;
     padding: 0.5rem 1rem;
     color: #888;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     transition: all 0.4s ease;
   }
 
@@ -82,7 +83,7 @@ nav {
     a,
     button {
       font-weight: bold;
-      padding: 0.6rem 1.8rem;
+      padding: 0.5rem 1.8rem;
       transition: all 0.4s ease;
       border: none;
       cursor: pointer;
@@ -103,15 +104,17 @@ nav {
       font-size: 0.8rem;
       color: #666;
       background: transparent;
-      text-transform: uppercase;
       &:hover {
         color: #aaa;
+      }
+      &::first-letter {
+        text-transform: uppercase;
       }
     }
   }
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1350px) {
   nav {
     display: none;
   }

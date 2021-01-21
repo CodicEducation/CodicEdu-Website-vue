@@ -86,7 +86,6 @@ export default {
     .length {
       font-family: "Rajdhani", sans-serif;
       font-size: 1rem;
-      font-weight: bold;
     }
   }
 }
@@ -103,6 +102,7 @@ export default {
 }
 
 // Mobile devices
+
 @media only screen and (max-width: 768px) {
   .list-item {
     padding: 1.8rem 1rem;
@@ -117,6 +117,12 @@ export default {
 
       &:hover {
         white-space: initial;
+      }
+    }
+    article {
+      width: 3.6rem;
+      img {
+        width: 0.9rem;
       }
     }
   }

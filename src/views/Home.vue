@@ -173,7 +173,7 @@ export default {
         grid-area: btns;
 
         button {
-          padding: 1.15rem 4.5rem;
+          padding: 1rem 4.5rem;
           margin-right: 2rem;
 
           @include btn();
@@ -299,7 +299,7 @@ export default {
 
 //smaller screens
 
-@media only screen and (max-width: 1420px) {
+@media only screen and (max-width: 1500px) {
   .home {
     main {
       .main-view {
@@ -318,7 +318,7 @@ export default {
         }
         .buttons {
           button {
-            padding: 0.8rem 2.6rem;
+            padding: 0.8rem 3rem;
             margin-right: 0.8rem;
           }
         }

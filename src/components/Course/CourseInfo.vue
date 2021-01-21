@@ -38,14 +38,16 @@ export default {
   margin: 4rem 2rem;
   border-bottom: 8px solid #fff1;
   transition: all 0.4s ease;
-  background: #f2f2f2;
+  background: #efefef;
   border-radius: 6px;
   padding: 0rem 2rem;
   //box-shadow: 0px 12px 16px #0005;
+  background: #ffffff08;
+  //border: 2px solid #444;
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0px 12px 16px #0001;
+    box-shadow: 0px 12px 16px #1118;
   }
 
   .img {
@@ -63,18 +65,19 @@ export default {
   h3 {
     margin: 0.5rem 0rem;
     margin-top: 2.6rem;
-    color: #222;
+    color: #eee;
     text-transform: capitalize;
   }
 
   p {
     line-height: 1.6rem;
     font-size: 0.86rem;
-    color: #888;
+    color: #666;
   }
 
   .lessons {
     color: #222;
+    color: #aaa;
     margin: 0.4rem 0rem;
   }
 
@@ -109,7 +112,7 @@ export default {
     p {
       font-size: 0.8rem;
       line-height: 1.2rem;
-      margin: 0.2rem 0rem;
+      margin: 0.4rem 0rem;
     }
 
     .lessons {

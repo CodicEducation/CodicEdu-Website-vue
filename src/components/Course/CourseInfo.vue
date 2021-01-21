@@ -42,7 +42,8 @@ export default {
   border-radius: 6px;
   padding: 0rem 2rem;
   //box-shadow: 0px 12px 16px #0005;
-  background: #ffffff08;
+  background: #ffffff0a;
+
   //border: 2px solid #444;
 
   &:hover {

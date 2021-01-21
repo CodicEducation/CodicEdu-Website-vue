@@ -3,7 +3,7 @@
     <disk-nav />
     <mobile-navbar />
     <main>
-      <div class="head">
+      <!-- <div class="head">
         <h2><span>codic</span> education</h2>
         <p>
           I förberedande syfte går våra utbildare en intern utbildning om
@@ -13,7 +13,7 @@
         <p>
           är relevant för era elever och tar ansvar för utbildningens röda tråd.
         </p>
-      </div>
+      </div> -->
       <div class="courses-view">
         <section class="txt-cont">
           <h3>våra nya kurser</h3>
@@ -108,6 +108,8 @@ export default {
         text-align: left;
         color: #eee;
         margin-bottom: 4rem;
+        background: #ffffff05;
+        width: 100%;
 
         h3 {
           margin: 1rem 0rem;

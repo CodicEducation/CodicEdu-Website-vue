@@ -71,32 +71,32 @@ export default {
     min-height: 100vh;
     width: 100%;
 
-    .head {
-      @include flex();
-      background: #252525;
-      padding: 6rem 0rem;
-      color: #cfcfcf;
-      min-height: 40rem;
-      width: 100%;
+    // .head {
+    //   @include flex();
+    //   background: #000;
+    //   padding: 6rem 0rem;
+    //   color: #cfcfcf;
+    //   min-height: 40rem;
+    //   width: 100%;
 
-      h2 {
-        color: #efefef;
-        text-transform: capitalize;
-        margin: 2rem 0rem;
-        font-size: 1.7rem;
-        span {
-          text-transform: uppercase;
-          font-weight: bolder;
-          color: $main-color;
-        }
-      }
+    //   h2 {
+    //     color: #efefef;
+    //     text-transform: capitalize;
+    //     margin: 2rem 0rem;
+    //     font-size: 1.7rem;
+    //     span {
+    //       text-transform: uppercase;
+    //       font-weight: bolder;
+    //       color: $main-color;
+    //     }
+    //   }
 
-      p {
-        display: block;
-        width: 74ch;
-        line-height: 2.1rem;
-      }
-    }
+    //   p {
+    //     display: block;
+    //     width: 74ch;
+    //     line-height: 2.1rem;
+    //   }
+    // }
     .courses-view {
       @include flex();
       padding: 6rem 4rem;
@@ -108,7 +108,6 @@ export default {
         text-align: left;
         color: #eee;
         margin-bottom: 4rem;
-        background: #ffffff05;
         width: 100%;
 
         h3 {
@@ -136,40 +135,46 @@ export default {
 @media only screen and (max-width: 768px) {
   .courses {
     main {
-      .head {
-        min-height: 30rem;
-        padding: 2rem;
-        align-items: flex-start;
-        h2 {
-          font-size: 1.4rem;
-          margin: 0.6rem 0rem;
-        }
+      // .head {
+      //   min-height: 30rem;
+      //   padding: 2rem;
+      //   align-items: flex-start;
+      //   h2 {
+      //     font-size: 1.4rem;
+      //     margin: 0.6rem 0rem;
+      //   }
 
-        p {
-          width: initial;
-          font-size: 0.88rem;
-          text-align: left;
-          max-width: 40rem;
-          line-height: 1.6rem;
-        }
-      }
+      //   p {
+      //     width: initial;
+      //     font-size: 0.88rem;
+      //     text-align: left;
+      //     max-width: 40rem;
+      //     line-height: 1.6rem;
+      //   }
+      // }
 
       .courses-view {
-        padding: 6rem 2rem;
+        padding: 2rem 0rem;
         padding-bottom: 12rem;
         .txt-cont {
-          max-width: 30rem;
+          padding: 1rem 2rem;
+          text-align: center;
+          @include flex();
 
           h3 {
             font-size: 1rem;
             border: none;
             padding: initial;
+            margin: 0.6rem 0rem;
           }
 
           p {
-            font-size: 0.88rem;
+            display: inline;
+            font-size: 0.8rem;
             border: none;
             padding: 0rem;
+            max-width: 30rem;
+            line-height: 1.3rem;
           }
         }
       }

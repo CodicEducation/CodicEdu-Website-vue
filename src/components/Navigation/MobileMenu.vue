@@ -45,7 +45,7 @@ export default {
 .mobile-menu {
   @include flex();
   justify-content: space-between;
-  padding: 2.3rem 0rem 4rem 0rem;
+  padding: 1.5rem 0rem;
   position: fixed;
   top: 0;
   right: 0;

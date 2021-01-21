@@ -65,7 +65,7 @@ body {
 @media only screen and (max-width: 768px) {
   #app {
     .mobile-only {
-      display: initial;
+      display: block;
     }
 
     .desktop-only {

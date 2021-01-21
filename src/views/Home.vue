@@ -408,7 +408,7 @@ export default {
     main {
       .main-view {
         height: initial;
-        min-height: 100vh;
+        height: 100vh;
         padding: 2rem 2rem 8rem 2rem;
         @include flex();
         justify-content: flex-start;
@@ -419,6 +419,7 @@ export default {
           margin-left: 0rem;
           margin: 2.5rem 0rem;
           width: 108%;
+          max-width: 20rem;
         }
 
         blockquote {

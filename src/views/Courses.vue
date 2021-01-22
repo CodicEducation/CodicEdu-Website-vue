@@ -62,7 +62,7 @@ export default {
   min-height: 100vh;
   @include flex();
   justify-content: space-between;
-  background: #222;
+  background: #1a1a1a;
 
   main {
     @include flex();
@@ -115,6 +115,7 @@ export default {
           text-transform: capitalize;
           border-left: 3px solid #fff6;
           padding: 0rem 1rem;
+          color: #efefef;
         }
         p {
           margin: 0.2rem 0rem;
@@ -158,8 +159,8 @@ export default {
         padding-bottom: 12rem;
         .txt-cont {
           padding: 1rem 2rem;
-          text-align: center;
-          @include flex();
+          margin-top: 4rem;
+          margin: 4rem 0rem 1rem 0rem;
 
           h3 {
             font-size: 1rem;

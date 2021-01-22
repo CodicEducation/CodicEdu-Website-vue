@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #222;
+  color: #efefef;
   width: 100vw;
   min-height: 100vh;
 

@@ -53,6 +53,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: #1c1c1c;
 
   img {
     cursor: pointer;

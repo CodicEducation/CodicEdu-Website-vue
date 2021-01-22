@@ -19,7 +19,7 @@
       </section>
 
       <section class="location">
-        <h2>Här finns vi</h2>
+        <h2>här finns vi</h2>
         <p>Drottninggatan 38, Göteborg</p>
 
         <iframe
@@ -82,12 +82,21 @@ export default {
   //background: #222;
 
   main {
+    width: 100%;
     min-height: 86vh;
     padding: 8rem 0rem 4rem 0rem;
     @include flex();
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    h2 {
+      color: $main-color;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
 
     section,
     form {
@@ -111,9 +120,9 @@ export default {
         padding: 1.3rem;
         background: #0003;
         border: none;
-        border-radius: 4px;
+        border-radius: 5px;
         color: #ddd;
-        //border: 1px solid #444;
+        border: 2px solid #ffffff0c;
       }
     }
 
@@ -124,17 +133,13 @@ export default {
     .txt-cont {
       text-align: left;
 
-      h2 {
-        color: $main-color;
-      }
-
       p {
         margin: 0.8rem 0rem;
         font-weight: bold;
         color: #ddd;
       }
 
-      p.welcome {
+      .welcome {
         margin: 1rem 0rem 5rem 0rem;
         line-height: 1.8rem;
         color: #bbb;
@@ -143,13 +148,14 @@ export default {
     }
 
     .location {
-      h2 {
-        color: $main-color;
-      }
-
       p {
         color: #aaa;
         margin: 0.5rem 0rem 1rem 0rem;
+      }
+
+      iframe {
+        margin: 1rem 0rem;
+        width: 100%;
       }
     }
 
@@ -195,6 +201,7 @@ export default {
           padding: 0.8rem;
           max-height: 8rem;
           font-size: 1rem;
+          margin: 0.5rem 0rem 1rem 0rem;
         }
       }
 

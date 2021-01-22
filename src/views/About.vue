@@ -206,12 +206,34 @@ export default {
       width: 100%;
       min-height: 80vh;
       @include flex();
-      padding: 10rem 4rem;
+      padding: 10rem 0rem 6rem 0rem;
 
       .cards {
+        width: 100%;
         margin: 4rem 0rem;
         @include flex();
         flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .reviews {
+      width: 100%;
+      @include flex();
+      align-items: flex-start;
+      padding: 4rem;
+      text-align: left;
+
+      p {
+        max-width: 65rem;
+      }
+
+      .rev-section {
+        margin: 4rem 0rem;
+        width: 100%;
+        @include flex();
+        flex-direction: row;
+        flex-wrap: wrap;
       }
     }
   }

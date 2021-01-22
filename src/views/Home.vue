@@ -173,7 +173,7 @@ export default {
         grid-area: btns;
 
         button {
-          padding: 1rem 4.5rem;
+          padding: 1rem 5.5rem;
           margin-right: 2rem;
 
           @include btn();

@@ -39,5 +39,10 @@ export default {
     font-size: 0.9rem;
     color: #999;
   }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 14px 20px #0003;
+  }
 }
 </style>

@@ -149,6 +149,7 @@ export default {
       background: url("../assets/images/bg.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
 
       blockquote {
         font-size: 2.4rem;
@@ -253,6 +254,7 @@ export default {
 
       .head {
         background: url("../assets/images/bg-mobile.jpg");
+        background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
 

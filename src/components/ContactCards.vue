@@ -70,4 +70,12 @@ export default {
     box-shadow: 0px 14px 20px #0003;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .card {
+    img {
+      //width: 8rem;
+    }
+  }
+}
 </style>

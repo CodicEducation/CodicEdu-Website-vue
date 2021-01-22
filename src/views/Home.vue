@@ -108,7 +108,7 @@ export default {
   min-height: 100vh;
   @include flex();
   justify-content: space-between;
-  background: #1f1f1f;
+  background: #1a1a1a;
 
   main {
     width: 100%;
@@ -408,7 +408,7 @@ export default {
     main {
       .main-view {
         height: initial;
-        height: 100vh;
+        min-height: 100vh;
         padding: 2rem 2rem 8rem 2rem;
         @include flex();
         justify-content: flex-start;

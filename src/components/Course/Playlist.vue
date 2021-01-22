@@ -61,18 +61,20 @@ export default {
 
 @media only screen and (max-width: 1250px) {
   .playlist {
-    margin-right: 0rem;
+    //margin-right: 0rem;
     height: initial;
     max-height: 100vh;
+    margin: 0rem;
+    border-left: none;
 
     &::-webkit-scrollbar {
       border-radius: 0px;
       width: 5px;
-      background: #fffe;
+      background: #666;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #0006;
+      background: #fff4;
       border-radius: 0px;
     }
 

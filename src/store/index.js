@@ -18,13 +18,13 @@ export default new Vuex.Store({
     contactPersons: [
       {
         fullName: "Robin Kamo",
-        title: "Affärsutvecklare & linjechef, Codic Education",
+        title: "Affärsutvecklare & linjechef",
         email: "robin.kamo@codic.se",
         number: "+46-768-990-065",
       },
       {
         fullName: "Maria Bryl",
-        title: "Utbildningsansvarig, Codic Education",
+        title: "Utbildningsansvarig",
         email: "maria.bryl@codic.se",
         number: "+46-730-436-480",
       },

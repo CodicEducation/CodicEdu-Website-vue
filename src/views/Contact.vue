@@ -17,6 +17,23 @@
           <p class="cont-info">hi@codic.se</p>
         </article>
       </section>
+
+      <section class="location">
+        <h2>Här finns vi</h2>
+        <p>Drottninggatan 38, Göteborg</p>
+
+        <iframe
+          width="520"
+          height="400"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=drottninggatan%2038%20g%C3%B6teborg+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe>
+      </section>
+
       <form @submit.prevent="sendMsg" class="form-cont">
         <div class="full-name">
           <article class="name-cont">
@@ -66,13 +83,15 @@ export default {
 
   main {
     min-height: 86vh;
-    padding: 4rem 0rem;
+    padding: 8rem 0rem 4rem 0rem;
     @include flex();
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     section,
     form {
+      margin: 3rem 0rem;
       width: 35%;
       height: 55vh;
       @include flex();
@@ -89,13 +108,17 @@ export default {
       textarea {
         margin: 0.8rem 0rem 1.6rem 0rem;
         width: 100%;
-        padding: 1.4rem;
-        background: #0002;
+        padding: 1.3rem;
+        background: #0003;
         border: none;
         border-radius: 4px;
         color: #ddd;
-        border: 1px solid #444;
+        //border: 1px solid #444;
       }
+    }
+
+    form {
+      width: 80vw;
     }
 
     .txt-cont {
@@ -119,6 +142,17 @@ export default {
       }
     }
 
+    .location {
+      h2 {
+        color: $main-color;
+      }
+
+      p {
+        color: #aaa;
+        margin: 0.5rem 0rem 1rem 0rem;
+      }
+    }
+
     .form-cont {
       .full-name {
         @include flex();
@@ -136,7 +170,7 @@ export default {
       button {
         @include btn();
         font-size: 0.9rem;
-        padding: 0.8rem 3.2rem;
+        padding: 0.8rem 5.2rem;
         align-self: flex-end;
       }
     }

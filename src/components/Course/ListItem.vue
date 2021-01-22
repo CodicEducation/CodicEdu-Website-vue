@@ -72,8 +72,11 @@ export default {
     margin-right: auto;
     margin-left: 1rem;
     text-align: left;
-    max-width: 30ch;
     line-height: 1.6rem;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   article {
@@ -105,24 +108,25 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .list-item {
-    padding: 1.8rem 1rem;
+    padding: 1.5rem 1rem;
     color: #aaa;
 
     .video-name {
-      font-size: 0.8rem;
-      max-width: 60%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
 
       &:hover {
         white-space: initial;
       }
     }
     article {
-      width: 3.6rem;
+      width: 3.2rem;
       img {
-        width: 0.9rem;
+        width: 0.8rem;
+      }
+
+      .length {
+        font-size: 0.8rem;
       }
     }
   }

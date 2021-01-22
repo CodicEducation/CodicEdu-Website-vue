@@ -16,7 +16,7 @@
         </p>
       </section>
       <section class="about-us">
-        <h2>Vem är vi</h2>
+        <h2>Vem är vi?</h2>
         <p>
           <span>Codic Education</span> har knoppats av från Codic Consulting och
           besitter samma tekniska kompetens och rekryteringsexpertis som

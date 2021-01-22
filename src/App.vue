@@ -13,7 +13,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #222;
+  background: #1a1a1a;
   scroll-behavior: smooth;
 }
 

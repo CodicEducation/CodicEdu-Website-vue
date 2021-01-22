@@ -60,7 +60,7 @@ export default {
 
     p {
       font-size: 0.9rem;
-      margin: 0.4rem 0rem;
+      margin: 0.2rem 0rem;
       color: #aaa;
     }
   }

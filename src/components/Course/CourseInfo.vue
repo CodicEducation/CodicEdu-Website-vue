@@ -35,7 +35,7 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  margin: 4rem 2rem;
+  margin: 0rem 2rem;
   border-bottom: 8px solid #fff1;
   transition: all 0.4s ease;
   background: #efefef;
@@ -73,12 +73,11 @@ export default {
   p {
     line-height: 1.6rem;
     font-size: 0.86rem;
-    color: #666;
+    color: #888;
   }
 
   .lessons {
-    color: #222;
-    color: #aaa;
+    color: #ccc;
     margin: 0.4rem 0rem;
   }
 
@@ -99,24 +98,26 @@ export default {
 
 @media only screen and (max-width: 768px) {
   .course-in-courses {
-    width: 18rem;
-    height: 22rem;
+    width: 16rem;
+    height: 19rem;
     padding: 0rem 1rem;
-    margin: 2rem 1rem;
+    margin: 4rem 1rem;
     flex: 0 0 auto;
+    justify-content: center;
 
     h3 {
-      font-size: 1rem;
+      font-size: 0.8rem;
       margin-top: 1.5rem;
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       line-height: 1.2rem;
       margin: 0.4rem 0rem;
     }
 
     .lessons {
+      display: none;
       margin: 0.2rem 0rem;
     }
 
@@ -126,6 +127,7 @@ export default {
 
     button {
       margin: 1rem 0rem;
+      padding: 0.4rem;
     }
   }
 }

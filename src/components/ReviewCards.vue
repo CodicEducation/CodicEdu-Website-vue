@@ -45,4 +45,16 @@ export default {
     box-shadow: 0px 14px 20px #0003;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .rev-card {
+    height: initial;
+    padding: 2rem;
+    margin: 2rem 0rem;
+
+    .rev-info {
+      margin: 2rem 0rem;
+    }
+  }
+}
 </style>

@@ -67,7 +67,7 @@ export default {
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0px 10px 10px #0002;
+    box-shadow: 0px 14px 20px #0003;
   }
 }
 </style>

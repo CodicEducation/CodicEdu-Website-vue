@@ -8,6 +8,7 @@ import Signup from "../views/Signup.vue"
 import Menu from "../views/MobileMenu.vue"
 import Course from "../views/Course.vue"
 import Profile from "../views/Profile.vue"
+import About from "../views/About.vue"
 
 // import firebase and build a watcher => auth().onAuthStateChange()
 
@@ -53,6 +54,11 @@ const routes = [
     path: "/profile",
     name: "Profile",
     component: Profile,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
   },
 ]
 

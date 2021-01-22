@@ -14,6 +14,9 @@
         <li>
           <router-link to="/contact">kontakta oss</router-link>
         </li>
+        <li>
+          <router-link to="/about">om oss</router-link>
+        </li>
       </ul>
 
       <section class="buttons">
@@ -51,7 +54,7 @@ export default {
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: #222;
+  background: #181818;
   z-index: 11;
   color: #aaa;
   animation: slideIn 0.4s forwards;
@@ -70,34 +73,37 @@ export default {
   ul {
     list-style: none;
     width: 100%;
+    margin-bottom: auto;
+    margin-top: 2rem;
 
     li {
-      padding: 1.2rem 2rem;
+      padding: 1.2rem 0rem;
       margin: 1rem 0rem;
-      background: #262626;
+      //background: #262626;
       width: 100%;
+      text-align: left;
 
       a {
-        color: #aaa;
-        font-weight: bold;
+        color: #efefef;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 0.8rem;
         padding: 2rem;
         width: 100%;
+        font-family: "Montserrat", sans-serif;
       }
     }
   }
 
   .buttons {
-    margin: 2rem 0rem;
+    margin: 4rem 0rem;
     width: 100%;
     @include flex();
     font-size: 0.9rem;
 
     .cta {
       @include btn();
-      padding: 0.8rem 6rem;
+      padding: 0.8rem 7rem;
       margin: 1rem 0rem 2rem 0rem;
       font-size: 0.8rem;
     }

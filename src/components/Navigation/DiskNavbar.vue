@@ -10,7 +10,7 @@
       <router-link to="/">startSidan</router-link>
       <router-link to="/courses">våra kurser</router-link>
       <router-link to="/contact">kontakta oss</router-link>
-      <router-link to="/contact">om oss</router-link>
+      <router-link to="/about">om oss</router-link>
     </section>
 
     <section class="reg">

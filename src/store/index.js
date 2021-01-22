@@ -15,6 +15,48 @@ export default new Vuex.Store({
     CourseVideos: [],
     courses: [],
     currentVideoLink: "",
+    contactPersons: [
+      {
+        fullName: "Robin Kamo",
+        title: "Affärsutvecklare & linjechef, Codic Education",
+        email: "robin.kamo@codic.se",
+        number: "+46-768-990-065",
+      },
+      {
+        fullName: "Maria Bryl",
+        title: "Utbildningsansvarig, Codic Education",
+        email: "maria.bryl@codic.se",
+        number: "+46-730-436-480",
+      },
+      {
+        fullName: "Henrik Enström",
+        title: "Grundare & VD",
+        email: "henrik.enstrom@codic.se",
+        number: "+46-739-803-313",
+      },
+    ],
+    reviews: [
+      {
+        reviewer: "— Elev på .NET-utvecklare distans, Campus Mölndal",
+        review:
+          "“ Ville tacka för chansen att studera hos er! Jag var med på lektionen idag och har gått med ett stort leende hela dagen. Vilken underbart pedagogisk människa – den absolut bästa läraren jag någonsin träffat. Och allt är strukturerat. Det här kommer bli två riktigt bra år. Tusen tack! ”",
+      },
+      {
+        reviewer: "— Samlad feedback C#-kurs, EC Utbildning",
+        review:
+          "“ Kursupplägget är tydligt och på en nivå som passar alla i klassen. Läraren är ödmjuk och flexibel i sin planering och sprider ut uppgifter och information under veckan, vilket har varit mycket uppskattat, så klassen känner att de hela tiden har saker att göra. ”",
+      },
+      {
+        reviewer: "— Elev på C#-kurs, EC Utbildning",
+        review:
+          "“ Jag är nära att ge upp ett par gånger per vecka, men läraren lyckas hela tiden få mig att testa lite till och vilja våga. Jag har till och med tackat nej till två anställningar de senaste veckorna tack vare det. Tack för det. ”",
+      },
+      {
+        reviewer: "— Elev på .NET-utvecklare distans, Campus Mölndal",
+        review:
+          "“ Tack för fantastiskt material, och en otroligt väl uppstyrd utbildning. Vår lärare är pedagogisk, otroligt hjälpsam och trevlig. Han skapar ett lugn hos mig, som ny elev. ”",
+      },
+    ],
   },
   mutations: {
     saveUid(state, uid) {

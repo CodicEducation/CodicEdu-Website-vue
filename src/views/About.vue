@@ -238,4 +238,70 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .about {
+    main {
+      p {
+        font-size: 0.9rem;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .head {
+        background: url("../assets/images/bg-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        blockquote {
+          font-size: 1.7rem;
+        }
+      }
+
+      .about-us {
+        padding: 8rem 2rem;
+      }
+
+      .offer {
+        padding: 4rem 2rem;
+        ul {
+          width: 100%;
+          flex-direction: column;
+          margin: 2rem 0rem;
+          padding: 0rem 1.5rem;
+
+          li {
+            width: 100%;
+            flex-grow: initial;
+            margin: 0.6rem 0rem;
+
+            p {
+              line-height: 1.4rem;
+            }
+          }
+        }
+      }
+
+      .contact {
+        p {
+          text-align: center;
+          margin: 0rem 2rem;
+          font-size: 0.8rem;
+          line-height: 1.4rem;
+        }
+      }
+
+      .reviews {
+        padding: 4rem 2rem;
+
+        h2 {
+          //font-size: 1rem;
+        }
+      }
+    }
+  }
+}
 </style>

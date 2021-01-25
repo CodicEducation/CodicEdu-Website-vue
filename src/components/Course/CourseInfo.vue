@@ -35,7 +35,7 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  margin: 0rem 2rem;
+  margin: 2rem 2rem;
   border-bottom: 8px solid #fff1;
   transition: all 0.4s ease;
   background: #efefef;

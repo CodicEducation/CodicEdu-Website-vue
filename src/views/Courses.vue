@@ -51,6 +51,7 @@ export default {
   },
   created() {
     this.$store.dispatch("getCourses")
+    window.scrollTo(0, 0)
   },
 }
 </script>

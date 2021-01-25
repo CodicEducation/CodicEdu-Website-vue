@@ -116,6 +116,9 @@ export default {
       return this.$store.state.reviews
     },
   },
+  created() {
+    window.scrollTo(0, 0)
+  },
 }
 </script>
 
@@ -254,7 +257,6 @@ export default {
 
       .head {
         background: url("../assets/images/bg-mobile.jpg");
-        background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
 

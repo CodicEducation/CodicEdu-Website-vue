@@ -5,6 +5,7 @@
       <router-link to="/contact">kontakta oss</router-link>
       <router-link to="/courses">våra kurser</router-link>
       <router-link to="/">startsidan</router-link>
+      <router-link to="/about">om oss</router-link>
     </section>
     <section class="socials">
       <img src="../../assets/images/linkedIn.svg" alt="" />
@@ -30,7 +31,7 @@ export default {}
 @import "../../assets/styles/globalStyles.scss";
 footer {
   margin-top: auto;
-  background: #181818;
+  background: #161616;
   padding: 8rem 0rem;
   width: 100%;
   min-height: 30vh;

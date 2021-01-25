@@ -43,6 +43,8 @@ export default {
   margin: 2rem;
   padding: 2rem;
   border-radius: 12px;
+  transform: translateY(-0.5rem);
+  box-shadow: 0px 14px 20px #0003;
 
   img {
     max-width: 10rem;
@@ -66,16 +68,8 @@ export default {
   }
 
   &:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0px 14px 20px #0003;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .card {
-    img {
-      //width: 8rem;
-    }
+    transform: translateY(0rem);
+    box-shadow: none;
   }
 }
 </style>

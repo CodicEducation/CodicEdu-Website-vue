@@ -24,9 +24,6 @@ export default {
       this.$router.push("/course")
     },
   },
-  created() {
-    console.log(this.course)
-  },
 }
 </script>
 
@@ -53,9 +50,11 @@ export default {
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     overflow: hidden;
+    @include flex();
 
     img {
       width: 100%;
+      height: 100%;
       transform: translateY(-1.1rem);
     }
   }

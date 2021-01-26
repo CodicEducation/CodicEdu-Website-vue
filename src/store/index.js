@@ -3,6 +3,7 @@ import Vuex from "vuex"
 import firebase from "firebase/app"
 import "firebase/auth"
 import "firebase/firestore"
+import "firebase/storage"
 
 Vue.use(Vuex)
 
@@ -15,7 +16,55 @@ export default new Vuex.Store({
     CourseVideos: [],
     courses: [],
     currentVideoLink: "",
+    teachers: [
+      {
+        fullName: "Arasto Sahbaei",
+        title: "Lärare",
+      },
+      {
+        fullName: "Björn Bergqvist",
+        title: "Lärare",
+      },
+      {
+        fullName: "Björn Strömberg",
+        title: "Lärare",
+      },
+      {
+        fullName: "Eva Hegnar",
+        title: "Lärare",
+      },
+      {
+        fullName: "Marcus Medina",
+        title: "Lärare",
+      },
+      {
+        fullName: "Elias Jadidi",
+        title: "Lärare",
+      },
+      {
+        fullName: "Patrik Nygren",
+        title: "Lärare",
+      },
+      {
+        fullName: "Sofia Zaid",
+        title: "Assistent",
+      },
+      {
+        fullName: "Benny Christensen",
+        title: "Assistent",
+      },
+      {
+        fullName: "Alexander Carlström",
+        title: "Assistent",
+      },
+    ],
     contactPersons: [
+      {
+        fullName: "Henrik Enström",
+        title: "Grundare & VD",
+        email: "henrik.enstrom@codic.se",
+        number: "+46-739-803-313",
+      },
       {
         fullName: "Robin Kamo",
         title: "Affärsutvecklare & linjechef",
@@ -29,10 +78,10 @@ export default new Vuex.Store({
         number: "+46-730-436-480",
       },
       {
-        fullName: "Henrik Enström",
-        title: "Grundare & VD",
-        email: "henrik.enstrom@codic.se",
-        number: "+46-739-803-313",
+        fullName: "Arash Sajjady",
+        title: "Admin",
+        email: "arash.sajjady@codic.se",
+        number: "+46-730-682-808",
       },
     ],
     reviews: [
@@ -165,6 +214,7 @@ export default new Vuex.Store({
             courses.push(doc.data())
           })
         })
+
       ctx.commit("saveCourses", courses)
     },
 
@@ -235,6 +285,19 @@ export default new Vuex.Store({
 
     playUservid(ctx, link) {
       ctx.commit("saveLink", link)
+    },
+
+    // Get images
+
+    getImages() {
+      firebase
+        .storage()
+        .ref()
+        .child("course-images/reactjs.jpg")
+        .getDownloadURL()
+        .then((url) => {
+          console.log(url)
+        })
     },
   },
   modules: {},

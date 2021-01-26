@@ -20,7 +20,7 @@ export default {
 @import "../assets/styles/globalStyles.scss";
 .rev-card {
   background: #ffffff06;
-  max-width: 44rem;
+  max-width: 40rem;
   height: 20rem;
   margin: 2rem;
   padding: 3rem;
@@ -29,6 +29,8 @@ export default {
   align-items: flex-start;
   text-align: left;
   border-radius: 12px;
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 10px 20px #0002;
 
   .rev-txt {
     line-height: 1.8rem;
@@ -41,8 +43,8 @@ export default {
   }
 
   &:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0px 14px 20px #0003;
+    transform: translateY(0rem);
+    box-shadow: none;
   }
 }
 

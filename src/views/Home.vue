@@ -30,16 +30,9 @@
         </article>
         <div class="pop-courses">
           <pop-course
-            title="C# master class"
-            description="Lorem ipsum amet dolor sit amet consectetur adipisicing elit. "
-          />
-          <pop-course
-            title="C# master class"
-            description="Lorem ipsum amet dolor sit amet consectetur adipisicing elit. "
-          />
-          <pop-course
-            title="C# master class"
-            description="Lorem ipsum amet dolor sit amet consectetur adipisicing elit. "
+            v-for="course in popCourses"
+            :key="course.name"
+            :course="course"
           />
         </div>
         <p class="desc desktop-only">
@@ -89,6 +82,14 @@ export default {
     user() {
       return this.$store.state.currentUser
     },
+    popCourses() {
+      let courses = this.$store.state.courses
+      let popCourses = []
+      for (let i = 0; i < 3; i++) {
+        popCourses.push(courses[i])
+      }
+      return popCourses
+    },
   },
   methods: {
     navToCourses: function() {
@@ -97,6 +98,9 @@ export default {
     navToContact: function() {
       this.$router.push("/contact")
     },
+  },
+  created() {
+    this.$store.dispatch("getCourses")
   },
 }
 </script>

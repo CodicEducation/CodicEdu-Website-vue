@@ -7,6 +7,7 @@
     />
     <section class="contact-info">
       <h4>{{ fullName }}</h4>
+      <p class="contact-title">Färdigheter:</p>
       <p class="title">{{ title }}</p>
     </section>
   </div>
@@ -58,6 +59,7 @@ export default {
       font-size: 0.9rem;
       margin: 0.2rem 0rem;
       color: #aaa;
+      align-self: flex-start;
     }
   }
 }

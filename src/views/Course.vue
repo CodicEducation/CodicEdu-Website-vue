@@ -112,6 +112,12 @@ export default {
       flex-direction: row;
       width: 6rem;
       cursor: pointer;
+
+      p {
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
     }
 
     img {
@@ -166,7 +172,6 @@ export default {
         }
         p {
           font-size: 0.7rem;
-          text-transform: uppercase;
         }
       }
     }

@@ -66,6 +66,17 @@
             :title="contact.title"
           />
         </div>
+
+        <div class="teachers-container">
+          <div class="container">
+            <teacher-card
+              v-for="teacher in teachers"
+              :key="teacher.fullName"
+              :fullName="teacher.fullName"
+              :title="teacher.title"
+            />
+          </div>
+        </div>
       </section>
       <section class="reviews">
         <h2>Vad tycker eleverna?</h2>
@@ -98,6 +109,7 @@ import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
 
 import ContactCards from "../components/ContactCards.vue"
 import ReviewCards from "../components/ReviewCards.vue"
+import TeacherCard from "../components/TeacherCard.vue"
 
 import Footer from "../components/Footer/Footer.vue"
 export default {
@@ -105,6 +117,7 @@ export default {
     DiskNav,
     MobileNavbar,
     ContactCards,
+    TeacherCard,
     ReviewCards,
     Footer,
   },
@@ -114,6 +127,9 @@ export default {
     },
     reviews() {
       return this.$store.state.reviews
+    },
+    teachers() {
+      return this.$store.state.teachers
     },
   },
   created() {
@@ -218,6 +234,26 @@ export default {
         @include flex();
         flex-direction: row;
         flex-wrap: wrap;
+      }
+
+      .teachers-container {
+        width: 100%;
+        padding: 1rem 4rem;
+        .container {
+          @include flex();
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
+      .assistents-container {
+        width: 100%;
+        padding: 1rem 4rem;
+        .container {
+          @include flex();
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
       }
     }
 

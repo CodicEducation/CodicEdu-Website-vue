@@ -30,8 +30,8 @@
         </article>
         <div class="pop-courses">
           <pop-course
-            v-for="course in popCourses"
-            :key="course.name"
+            v-for="course in courses"
+            :key="course.fullName"
             :course="course"
           />
         </div>
@@ -82,13 +82,11 @@ export default {
     user() {
       return this.$store.state.currentUser
     },
-    popCourses() {
+    courses() {
       let courses = this.$store.state.courses
-      let popCourses = []
-      for (let i = 0; i < 3; i++) {
-        popCourses.push(courses[i])
-      }
-      return popCourses
+      let filtered = courses.filter((courses, index) => index < 3)
+      console.log("filtered", filtered)
+      return filtered
     },
   },
   methods: {
@@ -101,9 +99,11 @@ export default {
   },
   created() {
     this.$store.dispatch("getCourses")
+    this.$store.dispatch("getImages")
   },
 }
 </script>
+
 <style lang="scss" scoped>
 @import "../assets/styles/globalStyles.scss";
 .home {

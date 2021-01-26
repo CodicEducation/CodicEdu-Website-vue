@@ -293,7 +293,7 @@ export default new Vuex.Store({
       firebase
         .storage()
         .ref()
-        .child("course-images/reactjs.jpg")
+        .child("course-images/javascript.jpg")
         .getDownloadURL()
         .then((url) => {
           console.log(url)

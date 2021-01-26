@@ -1,23 +1,31 @@
 <template>
   <div class="pop-course">
     <section class="img">
-      <img src="../../assets/images/csharp.jpg" alt="" />
+      <img :src="course.imgUrl" alt="" />
     </section>
     <section class="info">
-      <h4>{{ title }}</h4>
+      <h4>{{ course.fullName }}</h4>
       <p>
-        {{ description }}
+        {{ course.description }}
       </p>
     </section>
-    <button class="cta">till kursen</button>
+    <button class="cta" @click="openCourse">till kursen</button>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: String,
-    description: String,
+    course: Object,
+  },
+  methods: {
+    openCourse() {
+      this.$store.dispatch("saveSelectedCourse", this.course)
+      this.$router.push("/course")
+    },
+  },
+  created() {
+    console.log(this.course)
   },
 }
 </script>

@@ -38,7 +38,7 @@ export default {
 .card {
   @include flex();
   background: #ffffff06;
-  width: 22rem;
+  width: 21rem;
   height: 29rem;
   margin: 2rem 1rem;
   padding: 2rem;

@@ -19,31 +19,31 @@ export default new Vuex.Store({
     teachers: [
       {
         fullName: "Arasto Sahbaei",
-        title: "Lärare",
+        title: "JavaScript Fullstack",
       },
       {
         fullName: "Björn Bergqvist",
-        title: "Lärare",
+        title: ".NET",
       },
       {
         fullName: "Björn Strömberg",
-        title: "Lärare",
+        title: "C#",
       },
       {
         fullName: "Eva Hegnar",
-        title: "Lärare",
+        title: "data scientist",
       },
       {
         fullName: "Marcus Medina",
-        title: "Lärare",
+        title: "objektorienterad programmering",
       },
       {
         fullName: "Elias Jadidi",
-        title: "Lärare",
+        title: "Agila metoder",
       },
       {
         fullName: "Patrik Nygren",
-        title: "Lärare",
+        title: "Frontend ",
       },
       {
         fullName: "Sofia Zaid",
@@ -293,7 +293,7 @@ export default new Vuex.Store({
       firebase
         .storage()
         .ref()
-        .child("course-images/javascript.jpg")
+        .child("course-images/node.jpg")
         .getDownloadURL()
         .then((url) => {
           console.log(url)

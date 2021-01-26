@@ -1,7 +1,7 @@
 <template>
   <div class="course-in-courses">
     <div class="img">
-      <img src="../../assets/images/csharp.jpg" alt="" />
+      <img :src="course.imgUrl" alt="" />
     </div>
     <h3>{{ course.fullName }}</h3>
     <p>

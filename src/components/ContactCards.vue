@@ -38,13 +38,13 @@ export default {
 .card {
   @include flex();
   background: #ffffff06;
-  width: 23rem;
+  width: 22rem;
   height: 29rem;
-  margin: 2rem;
+  margin: 2rem 1rem;
   padding: 2rem;
   border-radius: 12px;
-  transform: translateY(-0.5rem);
-  box-shadow: 0px 14px 20px #0003;
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 10px 20px #0002;
 
   img {
     max-width: 10rem;

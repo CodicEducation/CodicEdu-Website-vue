@@ -45,7 +45,7 @@ export default {
   }
 
   .img {
-    height: 40%;
+    height: 48%;
     width: 100%;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;

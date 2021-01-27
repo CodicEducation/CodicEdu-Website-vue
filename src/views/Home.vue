@@ -85,7 +85,6 @@ export default {
     courses() {
       let courses = this.$store.state.courses
       let filtered = courses.filter((courses, index) => index < 3)
-      console.log("filtered", filtered)
       return filtered
     },
   },
@@ -99,7 +98,6 @@ export default {
   },
   created() {
     this.$store.dispatch("getCourses")
-    this.$store.dispatch("getImages")
   },
 }
 </script>

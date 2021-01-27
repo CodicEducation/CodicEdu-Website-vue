@@ -9,6 +9,7 @@ import Menu from "../views/MobileMenu.vue"
 import Course from "../views/Course.vue"
 import Profile from "../views/Profile.vue"
 import About from "../views/About.vue"
+import Lia from "../views/LIA.vue"
 
 // import firebase and build a watcher => auth().onAuthStateChange()
 
@@ -59,6 +60,11 @@ const routes = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/lia",
+    name: "LIA",
+    component: Lia,
   },
 ]
 

@@ -16,6 +16,7 @@ export default new Vuex.Store({
     CourseVideos: [],
     courses: [],
     currentVideoLink: "",
+    imgUrl: "",
     teachers: [
       {
         fullName: "Arasto Sahbaei",
@@ -131,6 +132,9 @@ export default new Vuex.Store({
     },
     saveVideosWatched(state, vids) {
       state.playedVideos = vids
+    },
+    saveUrl(state, url) {
+      state.url = url
     },
   },
   actions: {
@@ -289,16 +293,38 @@ export default new Vuex.Store({
 
     // Get images
 
-    getImages() {
-      firebase
+    async uploadImg(ctx, data) {
+      const metadata = {
+        contentType: data.file.type,
+      }
+
+      const fileRef = firebase
         .storage()
-        .ref()
-        .child("course-images/node.jpg")
-        .getDownloadURL()
-        .then((url) => {
-          console.log(url)
-        })
+        .ref("users-images")
+        .child(`${data.file.name}`)
+
+      await fileRef.put(data.file, metadata)
+      await fileRef.getDownloadURL().then((url) => {
+        console.log("URL: ", url, data.uid)
+        ctx.commit("saveUrl", url)
+
+        firebase
+          .firestore()
+          .collection("users")
+          .doc(data.uid)
+          .update({ imageUrl: url })
+      })
+      console.log(ctx)
     },
+
+    // uploadImgToDb(ctx, data) {
+    //   firebase
+    //     .firestore()
+    //     .collection("users")
+    //     .doc(data.uid)
+    //     .get()
+    //     .then((doc) => console.log(doc))
+    // },
   },
   modules: {},
 })

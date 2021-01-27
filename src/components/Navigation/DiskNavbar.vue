@@ -11,6 +11,7 @@
       <router-link to="/courses">våra kurser</router-link>
       <router-link to="/contact">kontakta oss</router-link>
       <router-link to="/about">om oss</router-link>
+      <router-link to="/lia">lia</router-link>
     </section>
 
     <section class="reg">

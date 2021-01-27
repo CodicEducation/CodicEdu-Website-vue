@@ -22,9 +22,6 @@ export default {
     number: String,
     title: String,
   },
-  mounted() {
-    console.log(document.getElementsByClassName("contactImg"))
-  },
   data: () => {
     return {
       name: "MariaBryl",

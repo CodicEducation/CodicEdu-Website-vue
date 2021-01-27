@@ -1,8 +1,5 @@
 <template>
   <div class="playlist">
-    <section class="list-title">
-      <h3>recently played</h3>
-    </section>
     <user-list-item v-for="item in playlist" :key="item.id" :item="item" />
   </div>
 </template>
@@ -27,14 +24,16 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/styles/globalStyles.scss";
 .playlist {
+  padding: 0rem 0.2rem;
   width: 100%;
   //background: #0002;
   height: 100%;
+  overflow-y: scroll;
 
   .list-title {
-    background: #141414;
+    //background: #141414;
     width: 100%;
-    padding: 2.5rem 14%;
+    padding: 2.5rem 4rem;
     margin-bottom: 0.4rem;
     color: #eee;
     font-size: 0.9rem;

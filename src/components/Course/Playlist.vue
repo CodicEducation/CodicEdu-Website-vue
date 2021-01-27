@@ -38,7 +38,7 @@ export default {
   @include flex();
   justify-content: flex-start;
   margin-right: 1.1rem;
-  border-left: 5px solid #fff1;
+  border-left: 5px solid $main-color;
   overflow-y: scroll;
   padding: 0rem 0.4rem;
 

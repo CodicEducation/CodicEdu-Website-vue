@@ -32,25 +32,32 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/styles/globalStyles.scss";
 .list-item {
-  background: #0002;
+  background: #0001;
   width: 100%;
   height: 4.7rem;
   @include flex();
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
   color: #888;
   font-size: 0.9rem;
-  padding: 0rem 14%;
+  padding: 3rem 4rem;
+  border-radius: 5px;
 
   .video-name {
     margin-right: auto;
     margin-left: 1rem;
+    text-align: left;
+    line-height: 1.6rem;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   article {
     height: 100%;
-    width: 14%;
+    width: 8rem;
     @include flex();
     flex-direction: row;
     justify-content: space-between;
@@ -71,13 +78,18 @@ export default {
       cursor: pointer;
     }
   }
+
+  &:hover {
+    background: #0003;
+    transform: translateY(-0.2rem);
+    box-shadow: 0px 8px 12px #0001;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .list-item {
     padding: 0rem 2rem;
     overflow: hidden;
-    padding-right: 5rem;
 
     .video-name {
       max-width: 50%;
@@ -88,9 +100,10 @@ export default {
     }
 
     article {
+      width: 5rem;
       button {
         padding: 0.4rem 0.8rem;
-        margin: 0rem 1rem;
+        margin-left: 1rem;
       }
     }
   }

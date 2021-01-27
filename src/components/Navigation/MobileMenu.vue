@@ -17,6 +17,9 @@
         <li>
           <router-link to="/about">om oss</router-link>
         </li>
+        <li>
+          <router-link to="/lia">lia</router-link>
+        </li>
       </ul>
 
       <section class="buttons">

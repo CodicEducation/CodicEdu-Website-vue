@@ -4,7 +4,7 @@
     <mobile-navbar />
 
     <main>
-      <h1>This is the lia page</h1>
+      <h2>Vad innebär det att ha LIA hos codic</h2>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae possimus
         laudantium libero qui cupiditate ut ea commodi nam animi repellat!
@@ -29,4 +29,32 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "../assets/styles/globalStyles.scss";
+
+.lia {
+  @include flex();
+  justify-content: space-between;
+
+  h2 {
+    color: $main-color;
+    text-transform: uppercase;
+    margin: 1.5rem 0rem;
+  }
+
+  p {
+    color: #aaa;
+    line-height: 1.8rem;
+  }
+
+  main {
+    min-height: 100vh;
+    width: 100%;
+    padding: 4rem;
+
+    @include flex();
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+</style>

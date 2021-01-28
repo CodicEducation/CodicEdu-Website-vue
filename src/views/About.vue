@@ -78,6 +78,52 @@
           </div>
         </div>
       </section>
+      <section class="collab">
+        <h2>våra sammarbeten</h2>
+        <p>
+          Sedan starten 2020 samarbetar vi med flera yrkeshögskolor och företag
+          i Göteborg. För oss är det viktigt att vår undervisning överensstämmer
+          med elevernas behov och målsättningar och arbetar därför arbetar vi
+          nära våra samarbetspartners för att nå fram till en passande plan. Vår
+          vision är att erbjuda den mest aktuella kunskapen inom IT och
+          programmering på bästa pedagogiska vis.
+        </p>
+
+        <div class="collabs">
+          <article>
+            <img src="../assets/images/logos/codic.png" alt="" />
+            <p>CODIC</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/campusMölndal.jpg" alt="" />
+            <p>campus mölndal</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/ECutbildning.jpg" alt="" />
+            <p>EC utbildning</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/FS.png" alt="" />
+            <p>future skills</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/Handelsakademin.png" alt="" />
+            <p>Handelsakademin</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/myh.png" alt="" />
+            <p>Myndigheten för yrkeshögskolan</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/newton.png" alt="" />
+            <p>newton</p>
+          </article>
+          <article>
+            <img src="../assets/images/logos/jensen-education.svg" alt="" />
+            <p>jensen education</p>
+          </article>
+        </div>
+      </section>
       <section class="reviews">
         <h2>Vad tycker eleverna?</h2>
         <p>
@@ -253,6 +299,55 @@ export default {
           @include flex();
           flex-direction: row;
           flex-wrap: wrap;
+        }
+      }
+    }
+
+    .collab {
+      width: 100%;
+      @include flex();
+      align-items: flex-start;
+      min-height: 40vh;
+      text-align: left;
+      //background: #efefef;
+
+      h2 {
+        padding: 0rem 4rem;
+      }
+      p {
+        max-width: 65rem;
+        padding: 0rem 4rem;
+      }
+
+      .collabs {
+        margin: 4rem 0rem;
+        padding: 2rem 6rem;
+        width: 100%;
+        @include flex();
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        background: #fdfdfd;
+        border-radius: 8px;
+
+        article {
+          margin: 2rem 4rem;
+          @include flex();
+          justify-content: space-between;
+
+          p {
+            color: #888;
+            margin: 2rem 0rem;
+            //font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+            padding: 0rem;
+          }
+
+          img {
+            height: 6rem;
+          }
         }
       }
     }

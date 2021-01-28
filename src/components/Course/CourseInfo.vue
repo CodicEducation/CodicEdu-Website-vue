@@ -38,8 +38,8 @@ export default {
 @import "../../assets/styles/globalStyles.scss";
 .course-in-courses {
   overflow: hidden;
-  width: 22rem;
-  min-height: 25rem;
+  width: 24rem;
+  min-height: 28rem;
   @include flex();
   justify-content: space-between;
   align-items: center;

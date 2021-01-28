@@ -22,6 +22,7 @@ export default {
 @import "../../assets/styles/globalStyles.scss";
 .courses-list {
   @include flex();
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;

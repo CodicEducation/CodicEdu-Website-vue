@@ -68,6 +68,7 @@
         </div>
 
         <div class="teachers-container">
+          <h2>våra lärare</h2>
           <div class="container">
             <teacher-card
               v-for="teacher in teachers"
@@ -329,7 +330,6 @@ export default {
         justify-content: center;
         align-items: flex-end;
         background: #fdfdfd;
-        border-radius: 8px;
 
         article {
           margin: 2rem 4rem;
@@ -426,6 +426,30 @@ export default {
           margin: 0rem 2rem;
           font-size: 0.8rem;
           line-height: 1.4rem;
+        }
+      }
+
+      .collab {
+        h2 {
+          padding: 0rem 2rem;
+        }
+        p {
+          padding: 0rem 2rem;
+        }
+
+        .collabs {
+          padding: 1rem;
+          article {
+            margin: 1rem 0.6rem;
+
+            p {
+              font-size: 0.8rem;
+            }
+
+            img {
+              height: 4rem;
+            }
+          }
         }
       }
 

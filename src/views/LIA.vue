@@ -4,7 +4,7 @@
     <mobile-navbar />
 
     <main>
-      <h2>Vad innebär det att ha LIA hos codic</h2>
+      <h2>Vad innebär det att utföra LIA hos codic</h2>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae possimus
         laudantium libero qui cupiditate ut ea commodi nam animi repellat!

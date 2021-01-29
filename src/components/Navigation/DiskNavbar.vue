@@ -14,7 +14,11 @@
       <router-link to="/lia">lia</router-link>
     </section>
 
-    <section class="reg">
+    <section class="reg" v-if="!uid">
+      <router-link class="logout" to="/login">log in</router-link>
+      <router-link class="signup" to="/profile">sign up</router-link>
+    </section>
+    <section class="reg" v-if="uid">
       <button class="logout" @click="logout">logga ut</button>
       <router-link class="signup" to="/profile">mina sidor</router-link>
     </section>
@@ -29,6 +33,11 @@ export default {
     },
     navToHome: function() {
       this.$router.push("/")
+    },
+  },
+  computed: {
+    uid() {
+      return this.$store.state.uid
     },
   },
 }

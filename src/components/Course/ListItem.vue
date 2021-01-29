@@ -40,8 +40,10 @@ export default {
 
     saveVideoForUser: function() {
       let uid = this.$store.state.uid
-      let data = { vid: this.item, uid: uid }
-      this.$store.dispatch("saveVideoUser", data)
+      if (uid) {
+        let data = { vid: this.item, uid: uid }
+        this.$store.dispatch("saveVideoUser", data)
+      }
     },
   },
 }

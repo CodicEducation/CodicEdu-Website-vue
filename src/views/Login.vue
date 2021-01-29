@@ -40,6 +40,18 @@ export default {
   components: {
     RegHeader,
   },
+  computed: {
+    uid() {
+      return this.$store.state.uid
+    },
+  },
+  watch: {
+    uid(newUid) {
+      if (newUid) {
+        this.$router.push("/")
+      }
+    },
+  },
   methods: {
     login: function() {
       let user = {

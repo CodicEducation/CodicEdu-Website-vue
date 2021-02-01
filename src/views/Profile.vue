@@ -20,14 +20,12 @@
             @change="uploadImg"
           />
         </div>
-        {{ url }}
       </section>
 
       <section class="list">
         <user-list />
       </section>
     </main>
-
     <Footer />
   </div>
 </template>

@@ -8,7 +8,7 @@
     <section class="contact-info">
       <h4>{{ fullName }}</h4>
       <div class="footer">
-        <p class="contact-title">Färdigheter:</p>
+        <p class="contact-title">Färdigheter</p>
         <p class="title">{{ title }}</p>
       </div>
     </section>
@@ -50,7 +50,7 @@ export default {
 
   .contact-info {
     width: 100%;
-    height: 40%;
+    height: 50%;
     @include flex();
     justify-content: space-between;
 
@@ -58,11 +58,21 @@ export default {
       margin-bottom: 1rem;
     }
 
+    .contact-title {
+      color: #888;
+      margin-bottom: 0.4rem;
+    }
+
     p {
       font-size: 0.9rem;
       margin: 0.2rem 0rem;
-      color: #aaa;
+      color: #e2e2e2;
       align-self: flex-start;
+      text-align: left;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
 
     .footer {
@@ -71,8 +81,14 @@ export default {
       background: #ffffff06;
       @include flex();
       align-items: flex-start;
-      padding: 1rem 2rem;
+      justify-content: flex-start;
+      padding: 1.4rem;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .teacher-card {
   }
 }
 </style>

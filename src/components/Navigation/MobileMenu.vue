@@ -22,9 +22,18 @@
         </li>
       </ul>
 
-      <section class="buttons">
+      <section class="buttons" v-if="uid">
         <button class="cta" @click="navToProfile">mina sidor</button>
         <button class="ghost" @click="logout">logga ut</button>
+      </section>
+
+      <section class="buttons" v-if="!uid">
+        <button class="cta" @click="() => this.$router.push('/signup')">
+          sign up
+        </button>
+        <button class="ghost" @click="() => this.$router.push('/login')">
+          log in
+        </button>
       </section>
     </div>
   </transition>
@@ -41,6 +50,11 @@ export default {
     },
     logout: function() {
       this.$store.dispatch("logout")
+    },
+  },
+  computed: {
+    uid() {
+      return this.$store.state.uid
     },
   },
 }

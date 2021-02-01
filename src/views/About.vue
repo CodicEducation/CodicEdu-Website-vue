@@ -16,7 +16,7 @@
         </p>
       </section>
       <section class="about-us">
-        <h2>Vem är vi?</h2>
+        <h2>vilka är vi?</h2>
         <p>
           <span>Codic Education</span> har knoppats av från Codic Consulting och
           besitter samma tekniska kompetens och rekryteringsexpertis som
@@ -68,7 +68,7 @@
         </div>
 
         <div class="teachers-container">
-          <h2>våra lärare</h2>
+          <h2>våra utbildare</h2>
           <div class="container">
             <teacher-card
               v-for="teacher in teachers"
@@ -292,16 +292,6 @@ export default {
           flex-wrap: wrap;
         }
       }
-
-      .assistents-container {
-        width: 100%;
-        padding: 1rem 4rem;
-        .container {
-          @include flex();
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-      }
     }
 
     .collab {
@@ -426,6 +416,10 @@ export default {
           margin: 0rem 2rem;
           font-size: 0.8rem;
           line-height: 1.4rem;
+        }
+
+        .teachers-container {
+          padding: 1rem;
         }
       }
 

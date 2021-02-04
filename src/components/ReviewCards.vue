@@ -30,8 +30,8 @@ export default {
   text-align: left;
   border-radius: 12px;
   transform: translateY(-0.2rem);
-  box-shadow: 0px 10px 20px #0002;
-  border-top: 4px solid $main-color;
+  box-shadow: 0px 10px 8px #0002;
+  border-top: 2px solid $main-color;
 
   .rev-txt {
     line-height: 1.8rem;

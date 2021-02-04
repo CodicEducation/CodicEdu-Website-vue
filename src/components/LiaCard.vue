@@ -63,12 +63,12 @@ export default {
 
     @include flex();
     justify-content: flex-start;
-    padding: 1rem 2rem;
+    padding: 0.6rem 2rem;
     background: #ffffff06;
 
     .contact-title {
       color: #888;
-      margin: 0.8rem 0rem 0.2rem 0rem;
+      margin: 1rem 0rem 0.2rem 0rem;
     }
 
     p {

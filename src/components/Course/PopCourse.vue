@@ -32,7 +32,7 @@ export default {
 .pop-course {
   position: relative;
   width: 20rem;
-  height: 24rem;
+  height: 22rem;
   background: #f2f2f2;
   border-radius: 6px;
   @include flex();
@@ -45,7 +45,7 @@ export default {
   }
 
   .img {
-    height: 48%;
+    height: 46%;
     width: 100%;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;

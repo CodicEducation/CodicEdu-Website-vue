@@ -59,6 +59,17 @@ export default new Vuex.Store({
         title: "Assistent",
       },
     ],
+    liaStudents: [
+      {
+        fullName: "Ali Suliman",
+        title: "front-end developer",
+        desc: "ansvarig för Codic Education hemsida",
+      },
+      {
+        fullName: "John Doe",
+        title: "back-end developer",
+      },
+    ],
     contactPersons: [
       {
         fullName: "Henrik Enström",

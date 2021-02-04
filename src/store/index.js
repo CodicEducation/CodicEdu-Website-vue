@@ -65,10 +65,6 @@ export default new Vuex.Store({
         title: "front-end developer",
         desc: "ansvarig för Codic Education hemsida",
       },
-      {
-        fullName: "John Doe",
-        title: "back-end developer",
-      },
     ],
     contactPersons: [
       {

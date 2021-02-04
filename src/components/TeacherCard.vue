@@ -2,7 +2,7 @@
   <div class="teacher-card">
     <img
       class="contactImg"
-      :src="require(`../assets/images/workers/${fullName}.png`)"
+      :src="require(`../assets/images/teachers/${fullName}.png`)"
       alt=""
     />
     <section class="contact-info">
@@ -21,9 +21,7 @@ export default {
     fullName: String,
     title: String,
   },
-  mounted() {
-    console.log(document.getElementsByClassName("contactImg"))
-  },
+
   data: () => {
     return {
       name: "MariaBryl",

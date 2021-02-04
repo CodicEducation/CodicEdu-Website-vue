@@ -16,7 +16,7 @@
 
     <section class="reg" v-if="!uid">
       <router-link class="logout" to="/login">log in</router-link>
-      <router-link class="signup" to="/profile">sign up</router-link>
+      <router-link class="signup" to="/signup">sign up</router-link>
     </section>
     <section class="reg" v-if="uid">
       <button class="logout" @click="logout">logga ut</button>
@@ -30,6 +30,7 @@ export default {
   methods: {
     logout: function() {
       this.$store.dispatch("logout")
+      this.$router.push("/")
     },
     navToHome: function() {
       this.$router.push("/")

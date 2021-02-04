@@ -69,12 +69,27 @@
 
         <div class="teachers-container">
           <h2>våra utbildare</h2>
+
           <div class="container">
             <teacher-card
               v-for="teacher in teachers"
               :key="teacher.fullName"
               :fullName="teacher.fullName"
               :title="teacher.title"
+            />
+          </div>
+        </div>
+
+        <div class="lia-container">
+          <h2>våra LIA praktikanter</h2>
+
+          <div class="container">
+            <lia-card
+              v-for="student in liaStudents"
+              :key="student.fullname"
+              :fullName="student.fullName"
+              :title="student.title"
+              :desc="student.desc"
             />
           </div>
         </div>
@@ -157,6 +172,7 @@ import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
 import ContactCards from "../components/ContactCards.vue"
 import ReviewCards from "../components/ReviewCards.vue"
 import TeacherCard from "../components/TeacherCard.vue"
+import LiaCard from "../components/LiaCard.vue"
 
 import Footer from "../components/Footer/Footer.vue"
 export default {
@@ -165,6 +181,7 @@ export default {
     MobileNavbar,
     ContactCards,
     TeacherCard,
+    LiaCard,
     ReviewCards,
     Footer,
   },
@@ -177,6 +194,9 @@ export default {
     },
     teachers() {
       return this.$store.state.teachers
+    },
+    liaStudents() {
+      return this.$store.state.liaStudents
     },
   },
   created() {
@@ -288,6 +308,20 @@ export default {
         padding: 1rem 4rem;
         .container {
           @include flex();
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
+      .lia-container {
+        width: 100%;
+        padding: 1rem 4rem;
+        margin-top: 4rem;
+        .container {
+          padding: 2rem 1rem;
+
+          @include flex();
+          justify-content: flex-start;
           flex-direction: row;
           flex-wrap: wrap;
         }

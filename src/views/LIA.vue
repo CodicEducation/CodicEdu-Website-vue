@@ -113,7 +113,7 @@ export default {
 
       .liaInfo {
         padding: 2rem;
-        background: #1118;
+        background: #1116;
         width: 100vw;
         min-height: 12rem;
         margin: 0.2rem 0rem;
@@ -162,6 +162,12 @@ export default {
             @include btn();
             padding: 0.6rem 4rem;
             margin: 1.5rem 0rem;
+            cursor: pointer;
+
+            &:hover {
+              background: #eee;
+              color: $main-color;
+            }
           }
         }
       }

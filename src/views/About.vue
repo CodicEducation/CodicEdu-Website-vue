@@ -455,6 +455,9 @@ export default {
         .teachers-container {
           padding: 1rem;
         }
+        .lia-container {
+          padding: 1rem;
+        }
       }
 
       .collab {

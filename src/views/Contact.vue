@@ -14,7 +14,7 @@
         <article>
           <p class="cont-info">Codic Consulting: +46-765-519-733</p>
           <p class="cont-info">Codic Education: +46-768-990-065</p>
-          <p class="cont-info">hi@codic.se</p>
+          <p class="cont-info">hello@codic.se</p>
         </article>
       </section>
 
@@ -38,17 +38,36 @@
         <div class="full-name">
           <article class="name-cont">
             <label for="firstName">förnamn</label>
-            <input type="text" name="firstName" required />
+            <input
+              type="text"
+              name="firstName"
+              v-model="firstName"
+              style="text-transform:capitalize"
+              required
+            />
           </article>
           <article class="name-cont">
             <label for="lastName">efternamn</label>
-            <input type="text" name="lastName" required />
+            <input
+              type="text"
+              name="lastName"
+              v-model="lastName"
+              style="text-transform:capitalize"
+              required
+            />
           </article>
         </div>
         <label for="email">e-post</label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" v-model="userEmail" required />
         <label for="txt">medelande</label>
-        <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+        <textarea
+          name="message"
+          id="msg"
+          cols="30"
+          rows="10"
+          v-model="message"
+          required
+        ></textarea>
         <button>skicka</button>
       </form>
     </main>
@@ -57,6 +76,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com"
 import DiskNav from "../components/Navigation/DiskNavbar.vue"
 import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
 
@@ -68,6 +88,44 @@ export default {
     DiskNav,
     MobileNavbar,
     Footer,
+  },
+
+  data: () => {
+    return {
+      firstName: "",
+      lastName: "",
+      userEmail: "",
+      message: "",
+    }
+  },
+
+  methods: {
+    sendMsg: async function(e) {
+      try {
+        emailjs.sendForm(
+          "service_ynyez36",
+          "template_8tihiwq",
+          e.target,
+          "user_onDiiBJFfDuLWl2sEFACX",
+          {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            email: this.userEmail,
+            message: this.message,
+          }
+        )
+      } catch (error) {
+        alert(
+          "Something went wrong while sending your email, please try again later!"
+        )
+        console.log(error)
+      }
+
+      this.firstName = ""
+      this.lastName = ""
+      this.userEmail = ""
+      this.message = ""
+    },
   },
 }
 </script>

@@ -6,19 +6,27 @@
       <router-link to="/courses">våra kurser</router-link>
       <router-link to="/">startsidan</router-link>
       <router-link to="/about">om oss</router-link>
+      <router-link to="/lia">lia</router-link>
     </section>
     <section class="socials">
-      <img src="../../assets/images/linkedIn.svg" alt="" />
-      <img src="../../assets/images/instagram.svg" alt="" />
+      <a
+        href="https://www.linkedin.com/company/codic-education/"
+        target="_blank"
+      >
+        <img src="../../assets/images/linkedIn.svg" alt="" />
+      </a>
+      <a href="https://www.instagram.com/codicconsulting/" target="_blank">
+        <img src="../../assets/images/instagram.svg" alt=""
+      /></a>
     </section>
     <section class="fotContactInfo">
       <p class="info">Codic Consulting: +46-765-519-733</p>
       <p class="info">Codic Education: +46-768-990-065</p>
-      <p class="info">Email: hi@codic.se</p>
+      <p class="info">Email: hello@codic.se</p>
     </section>
     <p class="adress">
-      Codic Consulting 13 Stora Nygatan, Göteborg, Västra Götalands län, 411 08,
-      Sverige
+      Codic Consulting Drottninggatan 38, Göteborg, Västra Götalands län, 411
+      07, Sverige
     </p>
   </footer>
 </template>

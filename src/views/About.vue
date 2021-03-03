@@ -76,6 +76,7 @@
               :key="teacher.fullName"
               :fullName="teacher.fullName"
               :title="teacher.title"
+              :skills="teacher.skills"
             />
           </div>
         </div>

@@ -5,8 +5,9 @@
 
     <main>
       <h2>
-        <span> Codic </span> Education <br />
-        tar gärna emot studerande på LIA!
+        <span> Codic </span> Education <br class="mobile-only" />
+        tar gärna emot <br class="mobile-only" />
+        studerande på LIA!
       </h2>
 
       <section class="infoContainer">
@@ -44,10 +45,16 @@
           <img src="../assets/images/contactPersons/Arash Sajjady.png" alt="" />
           <article>
             <p>
-              - Skicka ditt CV till: Arash Sajjady <br />
-              Arash.Sajjady@codic.se
+              Skicka ditt CV till: Arash Sajjady <br />
+              - arash.Sajjady@codic.se
             </p>
-            <button class="cta">skicka mail</button>
+            <a
+              href="mailto:arash.Sajjady@codic.se?subject=LIA ansökan"
+              class="cta"
+              action="mailto:someone@example.com"
+            >
+              kontakta
+            </a>
           </article>
         </div>
       </section>
@@ -80,13 +87,13 @@ export default {
 
   h2 {
     color: #eee;
-    text-transform: uppercase;
     margin: 1.5rem 0rem;
     text-align: left;
     line-height: 2.6rem;
 
     span {
       color: $main-color;
+      text-transform: uppercase;
     }
   }
 
@@ -124,6 +131,7 @@ export default {
         img {
           padding-left: 8rem;
           opacity: 0.9;
+          transform: scale(0.86);
         }
 
         p {
@@ -136,7 +144,7 @@ export default {
     }
 
     .liaContact {
-      margin-top: 10rem;
+      margin: 10rem 0rem 6rem 0rem;
 
       h4 {
         font-size: 1.2rem;
@@ -149,6 +157,7 @@ export default {
 
         img {
           margin-right: 4rem;
+          transform: scale(0.8);
         }
 
         article {
@@ -158,15 +167,88 @@ export default {
             line-height: 2rem;
           }
 
-          button {
+          a {
+            display: block;
+            text-decoration: none;
             @include btn();
-            padding: 0.6rem 4rem;
+            padding: 0.5rem 3.5rem;
             margin: 1.5rem 0rem;
             cursor: pointer;
 
             &:hover {
               background: #eee;
               color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .lia {
+    h2 {
+      align-self: center;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      margin: 6rem 0rem;
+    }
+    main {
+      padding: 2rem;
+
+      .infoContainer {
+        .liaInfo {
+          padding: 6rem 2rem;
+          margin: 0.4rem 0rem;
+          @include flex();
+
+          img {
+            padding-left: 0rem;
+            margin-bottom: 2rem;
+          }
+
+          p {
+            text-align: center;
+            margin: 0rem 1rem;
+            line-height: 1.6rem;
+          }
+        }
+      }
+
+      .liaContact {
+        width: 100%;
+        margin-top: 4rem;
+        @include flex();
+        justify-content: flex-start;
+
+        h4 {
+          font-size: 1.1rem;
+          text-align: left;
+          line-height: 1.6rem;
+          max-width: 25ch;
+        }
+
+        .contact-cont {
+          margin: 4rem 0rem;
+          width: 100%;
+          @include flex();
+
+          img {
+            margin-right: 0rem;
+            margin: 2rem 0rem;
+          }
+
+          article {
+            p {
+              text-align: left;
+              margin: 1rem 0rem;
+              line-height: 2rem;
+            }
+
+            button {
+              width: 100%;
             }
           }
         }

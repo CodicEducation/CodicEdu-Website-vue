@@ -296,6 +296,9 @@ export default new Vuex.Store({
               email: user.email,
               videosWatched: [],
             })
+
+          // send email link to user
+          cred.user.sendEmailVerification()
         })
     },
 

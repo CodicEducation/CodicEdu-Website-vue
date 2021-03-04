@@ -97,7 +97,6 @@ export default {
 
     loginUser: function() {
       alert("Your account has been registerd successfully!")
-      this.$router.push("/")
     },
   },
 }

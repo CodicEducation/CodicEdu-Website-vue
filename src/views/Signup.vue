@@ -81,7 +81,6 @@ export default {
         alert("Make sure your password matches the passwprd confermation")
       } else {
         this.sendUserToDB()
-        this.$router.push("/")
       }
     },
 
@@ -97,6 +96,7 @@ export default {
 
     loginUser: function() {
       alert("Your account has been registerd successfully!")
+      this.$router.push("/")
     },
   },
 }

@@ -25,10 +25,19 @@ export default {
   props: {
     course: Object,
   },
+  computed: {
+    uid() {
+      return this.$store.state.uid
+    }
+  },
   methods: {
     openCourse() {
-      this.$store.dispatch("saveSelectedCourse", this.course)
-      this.$router.push("/course")
+      if(this.uid){
+        this.$store.dispatch("saveSelectedCourse", this.course)
+        this.$router.push("/course")
+      }else{
+        alert("Du måste vara inloggad för att komma åt våra kurser")
+      }
     },
   },
 }

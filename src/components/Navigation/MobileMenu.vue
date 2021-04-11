@@ -20,6 +20,12 @@
         <li>
           <router-link to="/lia">lia</router-link>
         </li>
+        <li>
+          <router-link to="/hackathon">hackathon</router-link>
+        </li>
+        <li>
+          <router-link to="/privacypolicy">privacy policy</router-link>
+        </li>
       </ul>
 
       <section class="buttons" v-if="uid">
@@ -65,7 +71,7 @@ export default {
 .mobile-menu {
   @include flex();
   justify-content: space-between;
-  padding: 1.5rem 0rem;
+  padding: 2rem 0rem 0rem 0rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -78,7 +84,7 @@ export default {
 
   .closeBtn {
     align-self: flex-end;
-    margin: 0rem 2.5rem;
+    margin: 1rem 2.5rem;
     background: transparent;
     border: none;
 
@@ -94,18 +100,17 @@ export default {
     margin-top: 2rem;
 
     li {
-      padding: 1.2rem 0rem;
-      margin: 1rem 0rem;
+      padding: 1rem 0rem;
       //background: #262626;
       width: 100%;
-      text-align: left;
+      text-align: center;
 
       a {
         color: #efefef;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 0.8rem;
-        padding: 2rem;
+        // padding: 2rem;
         width: 100%;
         font-family: "Montserrat", sans-serif;
       }
@@ -113,10 +118,11 @@ export default {
   }
 
   .buttons {
-    margin: 4rem 0rem;
     width: 100%;
     @include flex();
     font-size: 0.9rem;
+    background: #0002;
+    padding: 3rem 0rem;
 
     .cta {
       @include btn();
@@ -130,6 +136,7 @@ export default {
       background: transparent;
       color: #aaa;
       font-size: 0.9rem;
+      padding: 0.8rem 7rem;
     }
   }
 }

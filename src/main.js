@@ -19,7 +19,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
+  if (!user) {
+    //router.push("/signup")
+  } else {
     store.dispatch("saveUid", user.uid)
   }
 })

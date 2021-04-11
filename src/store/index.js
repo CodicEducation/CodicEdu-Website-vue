@@ -11,191 +11,15 @@ export default new Vuex.Store({
   state: {
     uid: "",
     user: "",
+    errorMssg: "",
     courseSlected: "",
     playedVideos: [],
     CourseVideos: [],
     courses: [],
     currentVideoLink: "",
     imgUrl: "",
-    teachers: [
-      {
-        fullName: "Robin Kamo",
-        title: ".NET",
-        skills: [
-          ".NET",
-          "Swift",
-          "Obj-C",
-          "java",
-          "C#",
-          "JavaScript",
-          "Databases",
-          "Agila metodiker",
-        ],
-      },
-      {
-        fullName: "Arasto Sahbaei",
-        title: "JavaScript Fullstack",
-        skills: [
-          "JavaScript",
-          "Java",
-          "Java EE",
-          "HTML",
-          "CSS",
-          "SQL",
-          "React.js",
-          "OOP",
-        ],
-      },
-      {
-        fullName: "Björn Bergqvist",
-        title: ".NET",
-        skills: [
-          "JavaScript",
-          "C#",
-          "HTML",
-          "CSS",
-          "UI/UX",
-          "OOA/OOD",
-          "React.js",
-        ],
-      },
-      {
-        fullName: "Björn Strömberg",
-        title: "C#",
-        skills: [
-          "C++",
-          "JavaScript",
-          "C#",
-          ".NET",
-          "HTML",
-          "CSS",
-          "SQL",
-          "Scrum",
-          "Spelutveckling",
-        ],
-      },
-      {
-        fullName: "Eva Hegnar",
-        title: "data scientist",
-        skills: [
-          "Data scientist",
-          "Python",
-          "Matlab",
-          "R",
-          "Mathematica",
-          "C",
-          "C++",
-          "SQL",
-          "AMPL",
-        ],
-      },
-      {
-        fullName: "Marcus Medina",
-        title: "objektorienterad programmering",
-        skills: [
-          "JavaScript",
-          "C#",
-          ".NET",
-          "HTML",
-          "CSS",
-          "SQL",
-          "OOP",
-          "Java",
-        ],
-      },
-      {
-        fullName: "Elias Jadidi",
-        title: "Agila metoder",
-        skills: ["IT-projektledare", "Scrum", "Kanban", "Agile"],
-      },
-      {
-        fullName: "Patrik Nygren",
-        title: "Frontend ",
-        skills: [
-          "JavaScript",
-          "Java",
-          "Java EE",
-          "HTML",
-          "CSS",
-          "SQL",
-          "React.js",
-          "Webutveckling",
-          "Agile",
-        ],
-      },
-      {
-        fullName: "Erik Niklason",
-        title: ".NET",
-        skills: [
-          "JavaScript",
-          "C#",
-          ".NET",
-          "HTML",
-          "CSS",
-          "SQL",
-          "OOP",
-          "Java",
-          "OOA/OOD",
-        ],
-      },
-      {
-        fullName: "Sebastian Karlsson",
-        title: "JavaScript Fullstack",
-        skills: [
-          "Python",
-          "JavaScript",
-          "C",
-          "HTML",
-          "CSS",
-          "C++",
-          "PHP",
-          "SQL",
-          "Java",
-          "Vue.js",
-          "Databaser",
-          "Webutveckling",
-          "Scrum",
-          "Kanban",
-          "Agile",
-        ],
-      },
-      {
-        fullName: "Sofia Zaid",
-        title: "Assistent",
-        skills: [
-          "Assistent",
-          "Java",
-          "C#",
-          ".NET",
-          "HTML",
-          "CSS",
-          "SQL",
-          "Agilea metodiker",
-        ],
-      },
-      {
-        fullName: "Benny Christensen",
-        title: "Assistent",
-        skills: ["Assistent", "C#", ".NET"],
-      },
-      {
-        fullName: "Alexander Carlström",
-        title: "Assistent",
-        skills: ["Assistent", "Webutveckling", "C#", ".NET"],
-      },
-      {
-        fullName: "Lars Strömberg",
-        title: "Assistent",
-        skills: ["Assistent", "Python", "Java"],
-      },
-    ],
-    liaStudents: [
-      {
-        fullName: "Ali Suliman",
-        title: "front-end developer",
-        desc: "ansvarig för Codic Education hemsida",
-      },
-    ],
+    teachers: [],
+    liaStudents: [],
     contactPersons: [
       {
         fullName: "Henrik Enström",
@@ -222,28 +46,7 @@ export default new Vuex.Store({
         number: "+46-730-682-808",
       },
     ],
-    reviews: [
-      {
-        reviewer: "— Elev på .NET-utvecklare distans, Campus Mölndal",
-        review:
-          "“ Ville tacka för chansen att studera hos er! Jag var med på lektionen idag och har gått med ett stort leende hela dagen. Vilken underbart pedagogisk människa – den absolut bästa läraren jag någonsin träffat. Och allt är strukturerat. Det här kommer bli två riktigt bra år. Tusen tack! ”",
-      },
-      {
-        reviewer: "— Samlad feedback C#-kurs, EC Utbildning",
-        review:
-          "“ Kursupplägget är tydligt och på en nivå som passar alla i klassen. Läraren är ödmjuk och flexibel i sin planering och sprider ut uppgifter och information under veckan, vilket har varit mycket uppskattat, så klassen känner att de hela tiden har saker att göra. ”",
-      },
-      {
-        reviewer: "— Elev på C#-kurs, EC Utbildning",
-        review:
-          "“ Jag är nära att ge upp ett par gånger per vecka, men läraren lyckas hela tiden få mig att testa lite till och vilja våga. Jag har till och med tackat nej till två anställningar de senaste veckorna tack vare det. Tack för det. ”",
-      },
-      {
-        reviewer: "— Elev på .NET-utvecklare distans, Campus Mölndal",
-        review:
-          "“ Tack för fantastiskt material, och en otroligt väl uppstyrd utbildning. Vår lärare är pedagogisk, otroligt hjälpsam och trevlig. Han skapar ett lugn hos mig, som ny elev. ”",
-      },
-    ],
+    reviews: [],
   },
   mutations: {
     saveUid(state, uid) {
@@ -273,8 +76,55 @@ export default new Vuex.Store({
     saveUrl(state, url) {
       state.url = url
     },
+    getTeacher(state, teacher) {
+      state.teachers.push(teacher)
+    },
+    getStudent(state, student) {
+      state.liaStudents.push(student)
+    },
+    getReview(state, review) {
+      state.reviews.push(review)
+    },
+    errorMssg(state, mssg) {
+      state.errorMssg = mssg
+    },
   },
   actions: {
+    // Get Teachers from DB
+    getTeachers(ctx) {
+      console.log(ctx)
+      firebase
+        .firestore()
+        .collection("teachers")
+        .get()
+        .then((snaps) =>
+          snaps.docs.forEach((doc) => ctx.commit("getTeacher", doc.data()))
+        )
+    },
+
+    // Get students from DB
+    getStudents(ctx) {
+      console.log(ctx)
+      firebase
+        .firestore()
+        .collection("students")
+        .get()
+        .then((snaps) =>
+          snaps.docs.forEach((doc) => ctx.commit("getStudent", doc.data()))
+        )
+    },
+
+    // Get reviews from DB
+    getReviews(ctx) {
+      console.log(ctx)
+      firebase
+        .firestore()
+        .collection("reviews")
+        .get()
+        .then((snaps) =>
+          snaps.docs.forEach((doc) => ctx.commit("getReview", doc.data()))
+        )
+    },
     // Sign up a user
 
     signUser(ctx, user) {
@@ -282,7 +132,6 @@ export default new Vuex.Store({
         .auth()
         .createUserWithEmailAndPassword(user.email, user.password)
         .then((cred) => {
-          console.log(cred.user.uid)
           ctx.commit("saveUid", cred.user.uid)
 
           // save user in db
@@ -296,6 +145,13 @@ export default new Vuex.Store({
               email: user.email,
               videosWatched: [],
             })
+
+          // send email link to user
+
+          cred.user.sendEmailVerification()
+        })
+        .catch((error) => {
+          ctx.commit("errorMssg", error.message)
         })
     },
 
@@ -308,6 +164,7 @@ export default new Vuex.Store({
         .then((cred) => {
           ctx.commit("saveUid", cred.user.uid)
         })
+        .catch((error) => ctx.commit("errorMssg", error.message))
     },
 
     // logout current user
@@ -317,7 +174,6 @@ export default new Vuex.Store({
         .auth()
         .signOut()
         .then(() => {
-          console.log("Current user has been logged out")
           ctx.commit("resetUid")
         })
     },
@@ -451,17 +307,7 @@ export default new Vuex.Store({
           .doc(data.uid)
           .update({ imageUrl: url })
       })
-      console.log(ctx)
     },
-
-    // uploadImgToDb(ctx, data) {
-    //   firebase
-    //     .firestore()
-    //     .collection("users")
-    //     .doc(data.uid)
-    //     .get()
-    //     .then((doc) => console.log(doc))
-    // },
   },
   modules: {},
 })

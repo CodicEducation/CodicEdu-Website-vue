@@ -59,6 +59,13 @@
         </div>
         <label for="email">e-post</label>
         <input type="email" name="email" v-model="userEmail" required />
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="New message from codicedu.se"
+        />
+
         <label for="txt">medelande</label>
         <textarea
           name="message"
@@ -76,7 +83,6 @@
 </template>
 
 <script>
-import emailjs from "emailjs-com"
 import DiskNav from "../components/Navigation/DiskNavbar.vue"
 import MobileNavbar from "../components/Navigation/MobileNavbar.vue"
 
@@ -100,26 +106,26 @@ export default {
   },
 
   methods: {
-    sendMsg: async function(e) {
-      try {
-        emailjs.sendForm(
-          "service_ynyez36",
-          "template_8tihiwq",
-          e.target,
-          "user_onDiiBJFfDuLWl2sEFACX",
-          {
-            firstName: this.firstName,
-            lastName: this.lastName,
-            email: this.userEmail,
-            message: this.message,
-          }
-        )
-      } catch (error) {
-        alert(
-          "Something went wrong while sending your email, please try again later!"
-        )
-        console.log(error)
+    sendMsg: async function() {
+      const url = "https://formsubmit.co/ajax/hello@codic.se"
+      const data = {
+        name: this.firstName + this.lastName,
+        email: this.userEmail,
+        message: this.message,
       }
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      const results = await res.json()
+
+      console.log(results)
 
       this.firstName = ""
       this.lastName = ""

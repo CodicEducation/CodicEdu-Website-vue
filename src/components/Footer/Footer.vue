@@ -7,6 +7,7 @@
       <router-link to="/">startsidan</router-link>
       <router-link to="/about">om oss</router-link>
       <router-link to="/lia">lia</router-link>
+      <router-link to="/privacypolicy">Privacy Policy</router-link>
     </section>
     <section class="socials">
       <a

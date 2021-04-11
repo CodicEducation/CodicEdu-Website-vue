@@ -1,5 +1,5 @@
 <template>
-  <nav id="nav">
+  <nav id="DiskNav">
     <img
       @click="navToHome"
       src="../../assets/images/Codic-logo.svg"
@@ -12,6 +12,7 @@
       <router-link to="/contact">kontakta oss</router-link>
       <router-link to="/about">om oss</router-link>
       <router-link to="/lia">lia</router-link>
+      <router-link to="/hackathon">hackathon</router-link>
     </section>
 
     <section class="reg" v-if="!uid">
@@ -48,11 +49,12 @@ export default {
 @import "../../assets/styles/globalStyles.scss";
 nav {
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   padding: 2rem 6rem;
   @include flex();
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 
   img {
     cursor: pointer;
@@ -73,7 +75,7 @@ nav {
   }
 
   .links {
-    margin: 0rem 6rem;
+    margin: 0rem 2rem 0rem 4rem;
 
     a {
       &.router-link-exact-active {
@@ -125,8 +127,8 @@ nav {
   }
 }
 
-@media only screen and (max-width: 1350px) {
-  nav {
+@media only screen and (max-width: 1345px) {
+  #DiskNav {
     display: none;
   }
 }

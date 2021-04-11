@@ -41,6 +41,12 @@
           required
         />
       </article>
+      <p class="error" v-if="passNotMatch">
+        Make sure your password matches the passwprd confermation
+      </p>
+      <p class="error" v-if="passTooShort">
+        Make sure your password is 6 characters or more
+      </p>
       <button>skicka</button>
     </form>
     <footer>
@@ -48,6 +54,14 @@
         har du redan ett konto <router-link to="/login">logga in</router-link>
       </p>
     </footer>
+    <div class="modalOverlay" v-if="showModal">
+      <section class="modalContainer">
+        <p>
+          {{ modalMssg }}
+        </p>
+        <button @click="closeModal">tillbaka</button>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -63,25 +77,45 @@ export default {
       userEmail: "",
       userPass: "",
       passConfermation: "",
+      passNotMatch: false,
+      passTooShort: false,
+      showModal: false,
+      showErrorMssg: false,
+      modalMssg: `Ett verifieringsmeddelande har skickats till ditt email`,
+      oldErrorMssgVal: "",
     }
   },
-  computed: {},
+  computed: {
+    errorMssg() {
+      return this.$store.state.errorMssg
+    },
+  },
 
-  watch: {},
+  watch: {
+    errorMssg(newErrorMssg, oldErrorMssg) {
+      this.oldErrorMssgVal = oldErrorMssg
+      this.showErrorMssg = true
+      this.modalMssg = newErrorMssg
+    },
+  },
 
   methods: {
     signin: async function() {
       //password validation
-      if (this.userPass === "") {
-        alert("Password cannot be empty")
-      } else if (
+      if (
         this.userPass != this.passConfermation ||
         this.passConfermation === ""
       ) {
-        alert("Make sure your password matches the passwprd confermation")
+        this.passNotMatch = true
+        this.passTooShort = false
+      } else if (this.userPass.length < 6) {
+        this.passTooShort = true
+        this.passNotMatch = false
       } else {
+        this.passTooShort = false
+        this.passNotMatch = false
+        this.showModal = true
         this.sendUserToDB()
-        this.$router.push("/")
       }
     },
 
@@ -91,13 +125,15 @@ export default {
         email: this.userEmail,
         password: this.userPass,
       }
-      console.log(user)
       this.$store.dispatch("signUser", user)
     },
 
-    loginUser: function() {
-      alert("Your account has been registerd successfully!")
-      this.$router.push("/")
+    closeModal: function() {
+      this.showModal = false
+      this.userName = ""
+      this.userEmail = ""
+      this.userPass = ""
+      this.passConfermation = ""
     },
   },
 }
@@ -118,6 +154,12 @@ export default {
     article {
       @include cotumeInputField();
     }
+
+    .error {
+      color: rgb(215, 49, 49);
+      font-size: 0.8rem;
+    }
+
     button {
       margin: 2rem 0rem;
       padding: 1.2rem 5rem;
@@ -182,6 +224,38 @@ export default {
     footer {
       p {
         font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.modalOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0005;
+  backdrop-filter: blur(2px);
+  @include flex();
+
+  .modalContainer {
+    padding: 3rem 3rem 2rem 3rem;
+    width: 40%;
+    height: 26%;
+    background: #eee;
+    border-radius: 20px;
+    @include flex();
+    justify-content: space-around;
+    color: #444;
+    font-family: "Montserrat", sans-serif;
+
+    button {
+      @include btn();
+      padding: 0.8rem 2.8rem;
+
+      &:hover {
+        @include hover();
       }
     }
   }

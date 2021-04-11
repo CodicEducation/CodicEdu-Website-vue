@@ -10,6 +10,8 @@ import Course from "../views/Course.vue"
 import Profile from "../views/Profile.vue"
 import About from "../views/About.vue"
 import Lia from "../views/LIA.vue"
+import Hackathon from "../views/Hackathon.vue"
+import PrivacyPolicy from "../views/PrivacyPolicy.vue"
 
 // import firebase and build a watcher => auth().onAuthStateChange()
 
@@ -65,6 +67,16 @@ const routes = [
     path: "/lia",
     name: "LIA",
     component: Lia,
+  },
+  {
+    path: "/hackathon",
+    name: "Hackathon",
+    component: Hackathon,
+  },
+  {
+    path: "/privacypolicy",
+    name: "privacyPolicy",
+    component: PrivacyPolicy,
   },
 ]
 

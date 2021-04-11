@@ -5,7 +5,8 @@
     <main>
       <section class="main-view">
         <blockquote>
-          vi utbildar <span>Göteborg</span> inom IT och programmering
+          vi utbildar Sverige inom <br />
+          <span>IT och programmering</span>
         </blockquote>
         <p class="meeting-p">
           Söker du kompetenta lärare till en yrkesutbildning, <br />
@@ -413,7 +414,7 @@ export default {
         min-height: 100vh;
         padding: 2rem 2rem 8rem 2rem;
         @include flex();
-        justify-content: flex-start;
+        align-items: flex-start;
 
         .laptop {
           width: initial;

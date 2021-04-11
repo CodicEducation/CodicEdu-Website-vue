@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <transition name="fade" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view />
   </div>
 </template>
 
@@ -22,7 +20,7 @@ body {
   padding: 0rem;
   box-sizing: border-box;
   outline: none;
-  transition: all 0.4s ease;
+  // transition: all 0.4s ease;
 }
 
 #app {

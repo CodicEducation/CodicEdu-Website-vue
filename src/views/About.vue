@@ -121,7 +121,7 @@
           </article>
           <article>
             <img src="../assets/images/logos/FS.png" alt="" />
-            <p>future skills</p>
+            <p>future skill</p>
           </article>
           <article>
             <img src="../assets/images/logos/Handelsakademin.png" alt="" />
@@ -202,6 +202,9 @@ export default {
   },
   created() {
     window.scrollTo(0, 0)
+    this.$store.dispatch("getTeachers")
+    this.$store.dispatch("getStudents")
+    this.$store.dispatch("getReviews")
   },
 }
 </script>

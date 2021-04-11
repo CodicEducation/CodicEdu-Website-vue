@@ -1,5 +1,5 @@
 <template>
-  <nav id="nav">
+  <nav id="MobilNav">
     <img
       @click="navToHome"
       src="../../assets/images/Codic-logo.svg"
@@ -63,21 +63,18 @@ nav {
     background: transparent;
     padding: 0.5rem 2rem;
     border: none;
-
-    img {
-      transform: scale(1.2);
-    }
+    transform: scale(1.4);
   }
 }
 
-@media only screen and (min-width: 1350px) {
-  nav {
+@media only screen and (min-width: 1345px) {
+  #MobilNav {
     display: none;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  nav {
+  #MobilNav {
     height: 4rem;
     padding: 0rem 2rem;
 
@@ -87,6 +84,7 @@ nav {
 
     .menu-btn {
       padding: 0.5rem;
+      transform: scale(1.2);
     }
   }
 }

@@ -20,6 +20,7 @@
           required
         />
       </article>
+      <p v-if="loginError" class="error">{{ errorMssg }}</p>
       <button>log in</button>
     </form>
     <footer>
@@ -35,6 +36,7 @@ export default {
     return {
       loginEmail: "",
       loginPass: "",
+      loginError: false,
     }
   },
   components: {
@@ -44,11 +46,21 @@ export default {
     uid() {
       return this.$store.state.uid
     },
+    errorMssg() {
+      return this.$store.state.errorMssg
+    },
   },
   watch: {
     uid(newUid) {
       if (newUid) {
         this.$router.push("/")
+      }
+    },
+    errorMssg(errorMssg) {
+      if (errorMssg.length > 0) {
+        this.loginError = true
+      } else {
+        this.loginError = false
       }
     },
   },
@@ -73,6 +85,13 @@ export default {
   @include flex();
   color: #f2f2f2;
   background: #222;
+  .error {
+    color: rgb(215, 49, 49);
+    font-size: 0.8rem;
+    max-width: 50ch;
+    text-align: left;
+    padding-left: 2rem;
+  }
 
   form {
     margin: 6rem 0rem;

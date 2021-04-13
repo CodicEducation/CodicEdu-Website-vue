@@ -12,6 +12,8 @@ import About from "../views/About.vue"
 import Lia from "../views/LIA.vue"
 import Hackathon from "../views/Hackathon.vue"
 import PrivacyPolicy from "../views/PrivacyPolicy.vue"
+import YunasAdventure from "../views/YunasAdventure.vue"
+import YunasAdventurePrivacy from "../views/YunasAdventurePrivacy.vue"
 
 // import firebase and build a watcher => auth().onAuthStateChange()
 
@@ -77,6 +79,16 @@ const routes = [
     path: "/privacypolicy",
     name: "privacyPolicy",
     component: PrivacyPolicy,
+  },
+  {
+    path: "/application/games/yunas-adventures",
+    name: "Yunas Adventures",
+    component: YunasAdventure,
+  },
+  {
+    path: "/application/games/yunas-adventures/privacy-policy",
+    name: "Yunas Adventures Privacy Policy",
+    component: YunasAdventurePrivacy,
   },
 ]
 

@@ -7,7 +7,7 @@
       <section class="header">
         <div class="info">
           <h1>välkommen till Spel-Hackathon 2021!</h1>
-          <p class="date">23 - 25 april 2021</p>
+          <p class="date">21 - 23 april 2021</p>
         </div>
         <div class="content">
           <blockquote>

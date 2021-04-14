@@ -5,40 +5,42 @@
     <main>
       <section class="head">
         <article>
-          <blockquote>Följ med Yuna i hennes äventyr</blockquote>
+          <blockquote>Follow Yuna on amazing Adventures</blockquote>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit nemo
-            atque corporis unde, sit odit laboriosam autem nesciunt nostrum
-            harum rerum suscipit similique omnis dolor accusantium? Voluptas,
-            voluptatibus consectetur non eveniet, reiciendis error facere ullam
-            magni, odit iure fugit qui.
+            Yunas Adventures is an educational games that concentrates on visual
+            and vocal elements to eduacte children on animals an vehicles using
+            their sounds
           </p>
+          <div class="btn-container">
+            <button>IOS</button><button>ANDROID</button>
+          </div>
         </article>
-        <img src="../assets/games-assets/images/Icon.svg" alt="" />
+        <img src="../assets/games-assets/images/download.svg" alt="" />
       </section>
       <section class="intro">
         <blockquote>
-          Välj mellan djur eller fordon, och utförska de olika kategorier
+          Choose between different categories and explore different sounds and
+          items
         </blockquote>
 
         <img src="../assets/games-assets/images/categories.jpg" alt="" />
       </section>
 
       <section class="categories">
-        <h2>olika kategorier</h2>
+        <h2>different items</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ab.
+          Choose between different items and listen to their sounds
         </p>
         <div class="screens">
           <article>
-            <h4>Djur</h4>
+            <h4>Animals</h4>
             <img
               src="../assets/games-assets/images/screen-animals.jpg"
               alt=""
             />
           </article>
           <article>
-            <h4>Fordon</h4>
+            <h4>Vehicles</h4>
             <img
               src="../assets/games-assets/images/screen-vehicles.jpg"
               alt=""
@@ -50,23 +52,12 @@
       <section class="quiz">
         <img src="../assets/games-assets/images/quiz-img.svg" alt="" />
         <article>
-          <h2>qiuz nivå</h2>
+          <h2>qiuz level</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis sit
-            veritatis officia, autem accusantium voluptate maiores laudantium
-            vel non. Quibusdam.
+            Complete different quiz levels and unlock new Animals and Vehicles
+            to explor, more fun quize levels awaits in each new categorie.
           </p>
         </article>
-      </section>
-
-      <section class="download">
-        <blockquote>
-          Ladda ner Yuna's Adventures <br />
-          Tilljänglig för båda Android och IOS
-        </blockquote>
-        <div class="content">
-          <img src="../assets/games-assets/images/download.svg" alt="" />
-        </div>
       </section>
     </main>
     <Footer />
@@ -143,11 +134,20 @@ export default {
 
       img {
         margin: 0rem 4rem;
+        max-width: 40%;
+      }
+
+      .btn-container {
+        button {
+          @include btn();
+          margin-right: 4rem;
+          padding: 1rem 6rem;
+        }
       }
     }
 
     section.intro {
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: space-between;
 
       blockquote {

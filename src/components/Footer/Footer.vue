@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <h2><span>codic</span> education</h2>
+    <img src="../../assets/images/Codic-logo.svg" class="logo" alt="" />
     <section class="fotlinks">
       <router-link to="/contact">kontakta oss</router-link>
       <router-link to="/courses">våra kurser</router-link>
@@ -41,19 +41,15 @@ export default {}
 footer {
   margin-top: auto;
   background: #161616;
-  padding: 8rem 0rem;
+  padding: 6rem 0rem;
   width: 100%;
   min-height: 30vh;
   @include flex();
   justify-content: space-between;
   color: #f2f2f2;
 
-  h2 {
-    text-transform: capitalize;
-    span {
-      text-transform: uppercase;
-      color: $main-color;
-    }
+  .logo {
+    margin-bottom: 3rem;
   }
 
   p {

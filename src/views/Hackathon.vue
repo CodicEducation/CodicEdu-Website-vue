@@ -7,7 +7,7 @@
       <section class="header">
         <div class="info">
           <h1>välkommen till Spel-Hackathon 2021!</h1>
-          <p class="date">21 - 23 april 2021</p>
+          <p class="date">21 - 23 maj 2021</p>
         </div>
         <div class="content">
           <blockquote>
@@ -36,6 +36,12 @@
             <p>Spel-Hackathon 2021</p>
           </a>
         </div>
+        <section class="mention">
+          <p>
+            Bild tagen av <span>Andre Hunter</span> |
+            <a href="https://unsplash.com/@dre0316">profil</a>
+          </p>
+        </section>
       </section>
 
       <!-- /////// -->
@@ -311,6 +317,7 @@ export default {
     }
 
     section.header {
+      position: relative;
       justify-content: flex-start;
       padding: 2rem 0rem;
       width: 100%;
@@ -392,6 +399,26 @@ export default {
         align-self: flex-start;
         max-width: 50ch;
         text-align: left;
+      }
+
+      .mention {
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+        min-height: initial;
+        p {
+          font-size: 0.9rem;
+
+          span {
+            font-weight: bold;
+            color: #fff;
+          }
+
+          a {
+            font-weight: bold;
+            color: $main-color;
+          }
+        }
       }
     }
 

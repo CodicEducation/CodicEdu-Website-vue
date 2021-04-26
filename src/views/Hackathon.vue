@@ -644,10 +644,16 @@ export default {
       }
 
       section.header {
-        background-image: url("../assets/images/hackathon-bg.jpg");
-        background-size: cover;
+        padding: 6rem 0rem;
+        background-image: url("../assets/images/hackathon-bg-mobile.jpg");
+        background-size: contain;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-position: center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: initial;
+
         .info {
           width: 100%;
 

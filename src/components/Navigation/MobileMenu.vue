@@ -20,9 +20,9 @@
         <li>
           <router-link to="/lia">lia</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/hackathon">hackathon</router-link>
-        </li>
+        </li> -->
         <li>
           <router-link to="/privacypolicy">privacy policy</router-link>
         </li>

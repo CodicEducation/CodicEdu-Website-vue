@@ -12,7 +12,7 @@
       <router-link to="/contact">kontakta oss</router-link>
       <router-link to="/about">om oss</router-link>
       <router-link to="/lia">lia</router-link>
-      <router-link to="/hackathon">hackathon</router-link>
+      <!-- <router-link to="/hackathon">hackathon</router-link> -->
     </section>
 
     <section class="reg" v-if="!uid">

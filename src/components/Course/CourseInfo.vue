@@ -28,14 +28,14 @@ export default {
   computed: {
     uid() {
       return this.$store.state.uid
-    }
+    },
   },
   methods: {
     openCourse() {
-      if(this.uid){
+      if (this.uid) {
         this.$store.dispatch("saveSelectedCourse", this.course)
         this.$router.push("/course")
-      }else{
+      } else {
         alert("Du måste vara inloggad för att komma åt våra kurser")
       }
     },

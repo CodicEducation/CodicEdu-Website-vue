@@ -10,7 +10,7 @@ import Course from "../views/Course.vue"
 import Profile from "../views/Profile.vue"
 import About from "../views/About.vue"
 import Lia from "../views/LIA.vue"
-import Hackathon from "../views/Hackathon.vue"
+// import Hackathon from "../views/Hackathon.vue"
 import PrivacyPolicy from "../views/PrivacyPolicy.vue"
 import YunasAdventure from "../views/YunasAdventure.vue"
 import YunasAdventurePrivacy from "../views/YunasAdventurePrivacy.vue"
@@ -70,11 +70,11 @@ const routes = [
     name: "LIA",
     component: Lia,
   },
-  {
-    path: "/hackathon",
-    name: "Hackathon",
-    component: Hackathon,
-  },
+  // {
+  //   path: "/hackathon",
+  //   name: "Hackathon",
+  //   component: Hackathon,
+  // },
   {
     path: "/privacypolicy",
     name: "privacyPolicy",
